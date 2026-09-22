@@ -201,7 +201,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
               Driven by vision, anchored in execution
             </h2>
             <p className="text-sm sm:text-base text-[#464555]">
-              Our founders bring deep expertise in distributed systems, academic administration software, and enterprise product scaling.
+              Our leadership trio brings deep expertise in distributed systems, academic administration software, and enterprise operations.
             </p>
           </div>
 
@@ -211,11 +211,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
                 key={leader.name}
                 className="bg-white rounded-2xl p-6 shadow-sm border border-[#e2e7ff] flex flex-col items-center text-center gap-4 hover:shadow-md transition-all"
               >
-                <div 
-                  className="w-24 h-24 rounded-full bg-cover bg-center shadow-md border border-[#dae2fd]"
-                  style={{ backgroundImage: `url('${leader.image}')` }}
-                  role="img"
-                  aria-label={leader.name}
+                <img 
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-32 h-32 rounded-full object-cover shadow-md border border-[#dae2fd]"
                 />
                 <div className="flex flex-col gap-1">
                   <h3 className="text-xl font-bold text-[#131b2e] font-serif">{leader.name}</h3>

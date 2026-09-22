@@ -18,14 +18,6 @@ export const IMAGES = {
 
 export const FOUNDERS: LeaderProfile[] = [
   {
-    name: 'Karthik Balaji',
-    role: 'COO - Operations, Documentation & Finance',
-    badge: '',
-    bio: '',
-    focus: '',
-    image: IMAGES.office,
-  },
-  {
     name: 'Iswarya',
     role: 'CEO & Co-Founder',
     badge: '',
@@ -40,6 +32,14 @@ export const FOUNDERS: LeaderProfile[] = [
     bio: '',
     focus: '',
     image: IMAGES.nithishkumar,
+  },
+  {
+    name: 'Karthik Balaji',
+    role: 'COO',
+    badge: '',
+    bio: '',
+    focus: '',
+    image: IMAGES.office,
   },
 ];
 

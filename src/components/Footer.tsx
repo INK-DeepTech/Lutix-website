@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           <div className="flex items-center gap-3">
             <img 
               alt="Lutix" 
-              className="h-32 w-auto object-contain mix-blend-multiply" 
+              className="h-32 w-auto object-contain mix-blend-darken" 
               src="/logo-stacked.jpg"
             />
           </div>
@@ -95,7 +95,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           <ul className="space-y-2 text-sm">
             <li>
               <button onClick={() => onRouteChange('company')} className="hover:text-[#3525cd] transition-colors text-left">
-                Leadership: Iswarya & Nithishkumar
+                Executive Leadership
               </button>
             </li>
             <li>
