@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           <div className="flex items-center gap-3">
             <img 
               alt="Lutix" 
-              className="h-32 w-auto object-contain mix-blend-darken" 
+              className="h-32 w-auto object-contain" 
               src="/logo-horizontal.png"
             />
           </div>
@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           </p>
           <div className="flex items-center gap-2 pt-1 text-xs text-[#006f66] font-medium">
             <ShieldCheck className="w-4 h-4 text-[#006a61]" aria-hidden="true" />
-            <span>SOC2 Type II • ISO 27001 • HIPAA & GDPR Certified</span>
+            
           </div>
           {/* Social Links */}
           <div className="flex items-center gap-3 pt-2">
@@ -110,7 +110,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
             </li>
             <li>
               <span className="text-xs text-[#464555] block pt-1">
-                Global Operations: Silicon Valley • Chennai • Singapore
+                
               </span>
             </li>
           </ul>

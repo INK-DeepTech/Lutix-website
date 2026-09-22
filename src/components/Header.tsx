@@ -72,7 +72,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
           <div className="relative flex items-center justify-center">
             <img 
               alt="Lutix" 
-              className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-darken" 
+              className="h-16 md:h-20 w-auto object-contain transition-transform group-hover:scale-105" 
               src="/logo-horizontal.png"
             />
           </div>

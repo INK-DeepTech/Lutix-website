@@ -226,38 +226,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
           </div>
       </section>
 
-      {/* Global Scale & Customer-Centric Philosophy */}
-      <section className="bg-[#f2f3ff] py-10 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-          <div className="lg:col-span-12 flex flex-col gap-6 max-w-3xl">
-            <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
-              Global Scale
-            </span>
-            <h2 className="text-2xl sm:text-3xl text-[#131b2e] font-bold leading-tight">
-              Built for worldwide compliance, localized performance, and scale.
-            </h2>
-            <p className="text-sm sm:text-base text-[#464555] leading-relaxed">
-              Before writing a single line of code, our team embeds within your institution — observing how registrars, faculty, and IT staff actually work — so our software fits your real workflows, not the other way around.
-            </p>
 
-            <div className="grid grid-cols-2 gap-4 pt-2">
-              <div className="bg-white p-5 rounded-xl border border-[#e2e7ff] shadow-sm">
-                <span className="text-3xl font-bold text-[#3525cd] block">14+</span>
-                <span className="text-xs text-[#464555] font-medium mt-1 block">Countries Served</span>
-              </div>
-              <div className="bg-white p-5 rounded-xl border border-[#e2e7ff] shadow-sm">
-                <span className="text-3xl font-bold text-[#006a61] block">99.8%</span>
-                <span className="text-xs text-[#464555] font-medium mt-1 block">Customer Retention</span>
-              </div>
-            </div>
-
-            <div className="flex items-center gap-3 pt-2 text-xs text-[#464555]">
-              <CheckCircle2 className="w-4 h-4 text-[#006a61]" aria-hidden="true" />
-              <span>Fast, local servers across North America, Europe, and Asia-Pacific — so your team always gets a snappy experience.</span>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Flagship Product: academicOS Showcase */}
       <section className="py-10 md:py-10 px-6 md:px-8 bg-white">
