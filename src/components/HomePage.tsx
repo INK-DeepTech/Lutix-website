@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, TrendingUp, Zap, Shield, Activity } from 'lucide-react';
+import React from 'react';
+import { ArrowRight, Zap, Shield, Activity, Monitor, Smartphone, Code, Truck } from 'lucide-react';
 import { PageRoute } from '../types';
 import { FOUNDERS } from '../data/content';
 
@@ -8,8 +8,6 @@ interface HomePageProps {
 }
 
 export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
-  const [activeTab, setActiveTab] = useState<'engineering' | 'finance' | 'operations'>('engineering');
-
   return (
     <div className="w-full bg-white dark:bg-slate-900 transition-colors duration-300">
       
@@ -41,77 +39,53 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
         </div>
       </section>
 
-      {/* Social Proof Metrics */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 border-b border-slate-100 dark:border-slate-800 bg-white dark:bg-slate-900">
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-[#3525cd] dark:text-[#8b80f9]">$4.2B+</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-3 uppercase tracking-wide">Processed Annually</div>
-          </div>
-          <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-[#3525cd] dark:text-[#8b80f9]">99.99%</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-3 uppercase tracking-wide">Guaranteed Uptime</div>
-          </div>
-          <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-[#3525cd] dark:text-[#8b80f9]">10x</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-3 uppercase tracking-wide">Faster Deployments</div>
-          </div>
-          <div className="p-8 bg-slate-50 dark:bg-slate-800/50 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
-            <div className="text-3xl md:text-4xl font-bold text-[#3525cd] dark:text-[#8b80f9]">2,500+</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400 font-semibold mt-3 uppercase tracking-wide">Enterprise Clients</div>
-          </div>
-        </div>
-      </section>
-
-      {/* Dynamic Department Solutions */}
+      {/* Services We Offer */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <span className="text-sm font-bold text-[#3525cd] dark:text-[#8b80f9] uppercase tracking-widest">
-            Solutions for Every Team
-          </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-            Tailored Solutions for Every Department
+        <div className="text-center space-y-4 mb-16">
+          <h2 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
+            Services We Offer
           </h2>
         </div>
 
-        <div className="flex justify-center mb-12">
-          <div className="inline-flex p-1.5 bg-slate-100 dark:bg-slate-800 rounded-2xl gap-2">
-            {['engineering', 'finance', 'operations'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab as any)}
-                className={`px-6 py-2.5 rounded-xl text-sm font-semibold transition-all ${
-                  activeTab === tab
-                    ? 'bg-white dark:bg-slate-700 text-[#3525cd] dark:text-white shadow-sm'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                }`}
-              >
-                For {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center bg-white dark:bg-slate-900 p-8 md:p-12 rounded-3xl shadow-lg border border-slate-100 dark:border-slate-800">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white">
-              {activeTab === 'engineering' && 'Automatic code testing & deployment.'}
-              {activeTab === 'finance' && 'Automated billing & reconciliation.'}
-              {activeTab === 'operations' && 'Connect workflows across every department.'}
-            </h3>
-            <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-              {activeTab === 'engineering' && 'Speed up your releases with AI-powered testing and infrastructure that automatically scales up or down based on demand.'}
-              {activeTab === 'finance' && 'Close your books faster with real-time revenue recognition and automated expense tracking that scales with your business.'}
-              {activeTab === 'operations' && 'Link your CRM, student records, ERP, and internal databases into automated workflows that run complex business processes without anyone being the bottleneck.'}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30">
+            <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-700 flex items-center justify-center mb-6 group-hover:text-[#3525cd] text-slate-700 dark:text-slate-300 transition-colors">
+              <Monitor className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Custom Web Pages & Software</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Bespoke digital solutions tailored to your brand's specific needs, ensuring a unique and powerful online presence.
             </p>
           </div>
           
-          <div className="bg-slate-50 dark:bg-slate-800 p-12 rounded-2xl flex items-center justify-center">
-            <img 
-              className="w-full max-w-sm object-contain mix-blend-multiply dark:mix-blend-screen" 
-              alt="Platform Demo" 
-              src="/logo-stacked.png"
-            />
+          <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30">
+            <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-700 flex items-center justify-center mb-6 group-hover:text-[#3525cd] text-slate-700 dark:text-slate-300 transition-colors">
+              <Smartphone className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Mobile & Web Apps</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Cross-platform applications designed for performance, scalability, and seamless user experiences on any device.
+            </p>
+          </div>
+
+          <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30">
+            <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-700 flex items-center justify-center mb-6 group-hover:text-[#3525cd] text-slate-700 dark:text-slate-300 transition-colors">
+              <Code className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Website Development</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Modern, responsive, and robust websites engineered with the latest frontend and backend technologies.
+            </p>
+          </div>
+
+          <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm hover:shadow-md transition-all border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30">
+            <div className="w-12 h-12 rounded-xl bg-slate-50 dark:bg-slate-700 flex items-center justify-center mb-6 group-hover:text-[#3525cd] text-slate-700 dark:text-slate-300 transition-colors">
+              <Truck className="w-6 h-6" />
+            </div>
+            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Supply Chain Solutions</h3>
+            <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              Intelligent logistics and inventory tracking software to optimize your entire operational pipeline.
+            </p>
           </div>
         </div>
       </section>
@@ -126,8 +100,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6">
+            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Zap className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Intelligent Workflows</h3>
@@ -135,8 +109,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
                 Smart workflows that detect and fix common errors automatically.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6">
+            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Shield className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Enterprise Security</h3>
@@ -144,8 +118,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
                 Your data is encrypted everywhere. Access is controlled by role.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6">
+            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Activity className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Real-Time Telemetry</h3>
@@ -174,7 +148,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
               <img 
                 src={leader.image} 
                 alt={leader.name}
-                className="w-48 h-48 rounded-full object-cover shadow-md mb-6"
+                className="w-48 h-48 rounded-full object-cover shadow-md mb-6 hover:scale-105 transition-transform duration-500"
               />
               <h3 className="font-serif-brand text-2xl font-bold text-slate-900 dark:text-white mb-2">
                 {leader.name}
