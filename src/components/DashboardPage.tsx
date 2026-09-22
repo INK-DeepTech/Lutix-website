@@ -230,13 +230,13 @@ export const DashboardPage: React.FC<DashboardPageProps> = ({ onRouteChange }) =
         </div>
 
         {/* Live Logs & Terminal */}
-        <div className="bg-[#131b2e] text-white p-6 rounded-3xl shadow-xl font-mono text-xs space-y-4" role="log" aria-label="Live system activity log">
-          <div className="flex items-center justify-between pb-3 border-b border-white/10 text-white/70">
+        <div className="bg-white text-slate-900 border border-slate-200 p-6 rounded-3xl shadow-xl font-mono text-xs space-y-4" role="log" aria-label="Live system activity log">
+          <div className="flex items-center justify-between pb-3 border-b border-slate-200 text-slate-500">
             <div className="flex items-center gap-2">
               <Terminal className="w-4 h-4 text-[#86f2e4]" aria-hidden="true" />
-              <span className="font-semibold text-white">Live System Activity Log</span>
+              <span className="font-semibold text-slate-900">Live System Activity Log</span>
             </div>
-            <span className="text-[11px] text-white/50">Listening on channel #cluster-events</span>
+            <span className="text-[11px] text-slate-400">Listening on channel #cluster-events</span>
           </div>
 
           <div className="space-y-1.5 max-h-56 overflow-y-auto pr-2 scrollbar-thin">

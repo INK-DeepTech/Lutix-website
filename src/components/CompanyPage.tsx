@@ -383,7 +383,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       {/* Flagship Product: academicOS Showcase */}
       <section className="py-16 md:py-24 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="bg-gradient-to-r from-[#3525cd] via-[#4f46e5] to-[#3323cc] rounded-3xl p-8 sm:p-12 md:p-16 text-white relative overflow-hidden shadow-xl">
+          <div className="bg-gradient-to-r from-[#3525cd] via-[#4f46e5] to-[#3323cc] rounded-3xl p-8 sm:p-12 md:p-16 text-slate-900 relative overflow-hidden shadow-xl">
             <div className="absolute -right-16 -bottom-16 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
 
             <div className="max-w-3xl flex flex-col gap-6 relative z-10">

@@ -306,9 +306,9 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
                       <span className="material-symbols-outlined text-[#464555] text-lg">arrow_forward</span>
                     </div>
 
-                    <div className="flex flex-col items-center bg-[#3525cd] text-white p-4 rounded-xl shadow-md w-36 text-center">
-                      <span className="material-symbols-outlined text-white text-3xl mb-1">bolt</span>
-                      <span className="text-xs font-bold text-white">Execution Core</span>
+                    <div className="flex flex-col items-center bg-white text-slate-900 border border-[#3525cd]/20 p-4 rounded-xl shadow-md w-36 text-center">
+                      <span className="material-symbols-outlined text-[#3525cd] text-3xl mb-1">bolt</span>
+                      <span className="text-xs font-bold text-slate-900">Execution Core</span>
                       <span className="text-[11px] text-[#dad7ff]">State Check</span>
                     </div>
 
@@ -336,9 +336,9 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
                       <span className="material-symbols-outlined text-[#464555] text-lg">alt_route</span>
                     </div>
 
-                    <div className="flex flex-col items-center bg-[#006a61] text-white p-4 rounded-xl shadow-md w-36 text-center">
-                      <span className="material-symbols-outlined text-white text-3xl mb-1">hub</span>
-                      <span className="text-xs font-bold text-white">Schema Parser</span>
+                    <div className="flex flex-col items-center bg-white text-slate-900 border border-[#006a61]/20 p-4 rounded-xl shadow-md w-36 text-center">
+                      <span className="material-symbols-outlined text-[#3525cd] text-3xl mb-1">hub</span>
+                      <span className="text-xs font-bold text-slate-900">Schema Parser</span>
                       <span className="text-[11px] text-[#86f2e4]">Transform Rule</span>
                     </div>
 
@@ -366,9 +366,9 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
                       <span className="material-symbols-outlined text-[#464555] text-lg">arrow_forward</span>
                     </div>
 
-                    <div className="flex flex-col items-center bg-[#5c6164] text-white p-4 rounded-xl shadow-md w-36 text-center">
-                      <span className="material-symbols-outlined text-white text-3xl mb-1">hourglass_top</span>
-                      <span className="text-xs font-bold text-white">Backpressure</span>
+                    <div className="flex flex-col items-center bg-white text-slate-900 border border-[#5c6164]/20 p-4 rounded-xl shadow-md w-36 text-center">
+                      <span className="material-symbols-outlined text-[#3525cd] text-3xl mb-1">hourglass_top</span>
+                      <span className="text-xs font-bold text-slate-900">Backpressure</span>
                       <span className="text-[11px] text-[#d8dce0]">Rate Governor</span>
                     </div>
 
@@ -582,7 +582,7 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
 
       {/* CTA Section */}
       <section className="w-full py-16 md:py-20 px-6 md:px-8 max-w-7xl mx-auto text-center">
-        <div className="bg-[#3525cd] text-white rounded-3xl p-10 md:p-14 flex flex-col items-center gap-6 relative overflow-hidden shadow-xl">
+        <div className="bg-slate-50 text-slate-900 border border-slate-200 rounded-3xl p-10 md:p-14 flex flex-col items-center gap-6 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent pointer-events-none" />
           <div className="flex flex-col gap-2 max-w-2xl z-10">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">
@@ -601,7 +601,7 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
             </button>
             <button 
               onClick={() => onRouteChange('pricing-calculator')}
-              className="px-6 py-3.5 bg-[#4f46e5] text-white font-semibold text-sm rounded-xl hover:bg-[#4f46e5]/80 transition-all border border-white/20"
+              className="px-6 py-3.5 bg-[#4f46e5] text-white font-semibold text-sm rounded-xl hover:bg-[#4f46e5]/80 transition-all border border-slate-200"
             >
               Open Pricing Calculator
             </button>
@@ -612,7 +612,7 @@ export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRout
       {/* Spec Details Modal */}
       {activeModalSpec && (
         <div 
-          className="fixed inset-0 z-50 bg-[#131b2e]/60 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 bg-slate-900/30 backdrop-blur-sm flex items-center justify-center p-4 animate-in fade-in duration-150"
           role="dialog"
           aria-modal="true"
           aria-labelledby="modal-title"

@@ -72,19 +72,10 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
         >
           <div className="relative flex items-center justify-center">
             <img 
-              alt="Lutix Logo" 
-              className="h-8 w-auto object-contain transition-transform group-hover:scale-105" 
-              src={IMAGES.nexusLogo}
-              referrerPolicy="no-referrer"
+              alt="Lutix" 
+              className="h-10 md:h-12 w-auto object-contain transition-transform group-hover:scale-105 mix-blend-multiply" 
+              src="/logo-horizontal.jpg"
             />
-          </div>
-          <div className="flex flex-col">
-            <div className="flex items-center gap-1.5">
-              <span className="text-xl font-semibold tracking-tight text-[#131b2e]">Lutix</span>
-              <span className="text-xs px-1.5 py-0.5 rounded bg-[#e2e7ff] text-[#3525cd] font-medium tracking-wide">
-                ENTERPRISE
-              </span>
-            </div>
           </div>
         </button>
 
@@ -200,7 +191,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
       {mobileMenuOpen && (
         <>
           <div
-            className="fixed inset-0 top-16 bg-[#131b2e]/40 backdrop-blur-sm z-40 lg:hidden animate-in fade-in duration-150"
+            className="fixed inset-0 top-16 bg-slate-900/30 backdrop-blur-sm z-40 lg:hidden animate-in fade-in duration-150"
             onClick={() => setMobileMenuOpen(false)}
             aria-hidden="true"
           />

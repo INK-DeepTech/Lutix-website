@@ -19,12 +19,10 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
         <div className="md:col-span-4 space-y-4">
           <div className="flex items-center gap-3">
             <img 
-              alt="Lutix Logo" 
-              className="h-7 w-auto object-contain" 
-              src={IMAGES.nexusLogo}
-              referrerPolicy="no-referrer"
+              alt="Lutix" 
+              className="h-24 w-auto object-contain mix-blend-multiply" 
+              src="/logo-stacked.jpg"
             />
-            <span className="text-xl font-bold tracking-tight text-[#131b2e]">Lutix</span>
           </div>
           <p className="text-sm text-[#464555] leading-relaxed max-w-sm">
             Building smart, reliable software for universities and large organizations worldwide.

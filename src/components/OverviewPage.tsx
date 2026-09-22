@@ -108,7 +108,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
                 <div className="p-4 bg-[#3525cd] text-white rounded-xl flex items-center justify-between shadow-sm">
                   <div>
-                    <div className="text-xs text-white/80 font-medium">Efficiency Gain</div>
+                    <div className="text-xs text-slate-600 font-medium">Efficiency Gain</div>
                     <div className="text-2xl font-bold mt-0.5">+340% YoY</div>
                   </div>
                   <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center">
@@ -395,7 +395,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
       {/* High-Converting CTA Banner */}
       <section className="py-20 px-6 md:px-8">
-        <div className="max-w-7xl mx-auto bg-[#3525cd] rounded-3xl p-10 md:p-14 text-center text-white relative overflow-hidden shadow-xl">
+        <div className="max-w-7xl mx-auto bg-slate-50 text-slate-900 border border-slate-200 rounded-3xl p-10 md:p-14 text-center text-slate-900 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl" />
             <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-[#86f2e4] rounded-full blur-3xl" />
@@ -417,7 +417,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
               </button>
               <button 
                 onClick={() => onRouteChange('solutions-matrix')}
-                className="px-8 py-3.5 bg-[#4f46e5] text-white rounded-xl text-sm font-semibold hover:bg-[#4f46e5]/80 transition-all border border-white/20"
+                className="px-8 py-3.5 bg-[#4f46e5] text-white rounded-xl text-sm font-semibold hover:bg-[#4f46e5]/80 transition-all border border-slate-200"
               >
                 Explore Solutions Matrix
               </button>

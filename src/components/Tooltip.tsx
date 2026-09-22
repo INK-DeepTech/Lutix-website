@@ -48,7 +48,7 @@ export const Tooltip: React.FC<TooltipProps> = ({ children, label }) => {
           ref={tooltipRef}
           id="tooltip-popup"
           role="tooltip"
-          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-[#131b2e] text-white text-[11px] leading-relaxed font-normal whitespace-nowrap shadow-lg z-50 pointer-events-none animate-in fade-in duration-150"
+          className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 rounded-lg bg-white text-slate-900 text-[11px] border border-slate-200 leading-relaxed font-normal whitespace-nowrap shadow-lg z-50 pointer-events-none animate-in fade-in duration-150"
         >
           {label}
           <span className="absolute top-full left-1/2 -translate-x-1/2 w-0 h-0 border-x-4 border-x-transparent border-t-4 border-t-[#131b2e]" />
