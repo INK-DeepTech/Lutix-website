@@ -77,10 +77,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
               </span>
               <p className="text-xs text-[#464555] mt-0.5">Higher Education & Institutional ERP</p>
             </li>
-            <li>
-              <span className="text-[#131b2e] font-medium">NexusScale Mesh</span>
-              <p className="text-xs text-[#464555] mt-0.5">Self-Managing Cloud Infrastructure</p>
-            </li>
+
             <li>
               <button onClick={() => onRouteChange('demo-request')} className="text-xs text-[#3525cd] hover:underline flex items-center gap-1 font-medium mt-1">
                 <span>Book a Demo</span>
