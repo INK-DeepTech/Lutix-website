@@ -46,6 +46,7 @@
   --spacing-space-md: 16px;
   --spacing-space-lg: 24px;
   --spacing-space-xl: 48px;
+  --font-serif-brand: 'Playfair Display', serif;
 }
 
 body {
@@ -54,8 +55,8 @@ body {
   color: #131b2e;
 }
 
-.font-serif, h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
+h1, h2, h3 {
+  font-family: var(--font-serif-brand);
 }
 
 .font-headline-xl {

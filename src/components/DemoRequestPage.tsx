@@ -70,7 +70,8 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
             <MessageCircle className="w-3.5 h-3.5" />
             <span>Consultation</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#131b2e] tracking-tight font-serif">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#131b2e] tracking-tight font-serif-brand">
+            <img src="/bird-icon.png" alt="" className="h-8 w-8 mr-3 inline-block object-contain mix-blend-darken" aria-hidden="true" />
             Let's discuss your ecosystem.
           </h1>
           <p className="text-base sm:text-lg text-[#464555] leading-relaxed max-w-2xl mt-2">
@@ -200,7 +201,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
             </div>
 
             <div className="space-y-2">
-              <h3 className="text-2xl font-bold text-[#131b2e] font-serif">
+              <h3 className="text-2xl font-bold text-[#131b2e] font-serif-brand">
                 Message Received
               </h3>
               <p className="text-sm text-[#464555] leading-relaxed">

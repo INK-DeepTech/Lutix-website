@@ -198,6 +198,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
               Executive Leadership
             </span>
             <h2 className="text-2xl sm:text-3xl text-[#131b2e] font-bold">
+              <img src="/bird-icon.png" alt="" className="h-6 w-6 mr-2 inline-block object-contain mix-blend-darken" aria-hidden="true" />
               Driven by vision, anchored in execution
             </h2>
             <p className="text-sm sm:text-base text-[#464555]">
@@ -214,10 +215,10 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
                 <img 
                   src={leader.image}
                   alt={leader.name}
-                  className="w-32 h-32 rounded-full object-cover shadow-md border border-[#dae2fd]"
+                  className="h-32 w-32 rounded-full object-cover shadow-md mx-auto mb-4 border border-[#dae2fd]"
                 />
                 <div className="flex flex-col gap-1">
-                  <h3 className="text-xl font-bold text-[#131b2e] font-serif">{leader.name}</h3>
+                  <h3 className="text-xl font-bold text-[#131b2e] font-serif-brand">{leader.name}</h3>
                   <p className="text-sm text-[#3525cd] font-semibold">{leader.role}</p>
                 </div>
               </div>

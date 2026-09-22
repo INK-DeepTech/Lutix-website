@@ -150,6 +150,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
             Solutions for Every Team
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#131b2e] mb-3">
+            <img src="/bird-icon.png" alt="" className="h-6 w-6 mr-2 inline-block object-contain mix-blend-darken" aria-hidden="true" />
             Tailored Solutions for Every Department
           </h2>
           <p className="text-sm sm:text-base text-[#464555]">
