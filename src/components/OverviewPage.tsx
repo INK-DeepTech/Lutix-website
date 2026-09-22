@@ -14,7 +14,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#f2f3ff] pt-14 pb-20 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="relative overflow-hidden bg-[#f2f3ff] pt-14 pb-20 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3525cd]/10 rounded-full blur-3xl" />
           <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-[#006a61]/10 rounded-full blur-3xl" />
@@ -122,7 +122,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* Social Proof Metrics */}
-      <section className="bg-white py-14 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="bg-white py-8 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div className="p-6 bg-[#faf8ff] rounded-2xl border border-[#e2e7ff] shadow-sm">
             <div className="text-3xl sm:text-4xl font-bold text-[#3525cd]">$4.2B+</div>
@@ -144,7 +144,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* Dynamic Department Solution Tabs */}
-      <section className="py-12 md:py-16 px-6 md:px-8 max-w-7xl mx-auto w-full">
+      <section className="py-8 md:py-10 px-6 md:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider block mb-2">
             Solutions for Every Team
@@ -348,7 +348,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* Core Capabilities Feature Grid */}
-      <section className="bg-[#f2f3ff] py-12 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden">
+      <section className="bg-[#f2f3ff] py-8 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden">
         <img src={IMAGES.nexusLogo} alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] -rotate-12 pointer-events-none mix-blend-multiply" aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -395,7 +395,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* High-Converting CTA Banner */}
-      <section className="py-12 px-6 md:px-8">
+      <section className="py-8 px-6 md:px-8">
         <div className="max-w-7xl mx-auto bg-slate-50 text-slate-900 border border-slate-200 rounded-3xl p-10 md:p-14 text-center text-slate-900 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl" />

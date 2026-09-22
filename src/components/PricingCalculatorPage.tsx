@@ -53,7 +53,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Top Banner / Header area */}
-      <section className="w-full bg-[#f2f3ff] py-14 md:py-12 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="w-full bg-[#f2f3ff] py-8 md:py-8 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
           <span className="px-3 py-1 rounded-full bg-[#e2dfff] text-[#0f0069] text-xs font-bold uppercase tracking-wider">
             Transparent Scaling
@@ -103,7 +103,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
       </section>
 
       {/* Tier Cards Grid */}
-      <section className="w-full py-16 md:py-12 px-6 md:px-8 max-w-7xl mx-auto">
+      <section className="w-full py-10 md:py-8 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
           {/* Card 1: Developer & Team */}
           <div className="bg-white rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
@@ -267,7 +267,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
       </section>
 
       {/* Interactive Resource Utilization Estimator / Calculator */}
-      <section className="w-full bg-[#f2f3ff] py-16 md:py-16 px-6 md:px-8 border-y border-[#e2e7ff]">
+      <section className="w-full bg-[#f2f3ff] py-10 md:py-10 px-6 md:px-8 border-y border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="max-w-2xl">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider block">
@@ -468,7 +468,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
       </section>
 
       {/* Enterprise Trust Badges */}
-      <section className="w-full py-16 px-6 md:px-8 max-w-7xl mx-auto">
+      <section className="w-full py-10 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-6 bg-white rounded-2xl border border-[#e2e7ff] shadow-sm flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-[#e2dfff] flex items-center justify-center text-[#3525cd] shrink-0">

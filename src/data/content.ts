@@ -18,8 +18,16 @@ export const IMAGES = {
 
 export const FOUNDERS: LeaderProfile[] = [
   {
+    name: 'Karthik Balaji',
+    role: 'COO - Operations, Documentation & Finance',
+    badge: '',
+    bio: '',
+    focus: '',
+    image: IMAGES.office,
+  },
+  {
     name: 'Iswarya',
-    role: 'Co-Founder & Chief Executive Officer',
+    role: 'CEO & Co-Founder',
     badge: '',
     bio: '',
     focus: '',
@@ -27,48 +35,15 @@ export const FOUNDERS: LeaderProfile[] = [
   },
   {
     name: 'Nithishkumar',
-    role: 'Co-Founder & Chief Technology Officer',
+    role: 'CTO & Co-Founder',
     badge: '',
     bio: '',
     focus: '',
     image: IMAGES.nithishkumar,
   },
-  {
-    name: 'Karthik Balaji',
-    role: 'Chief Operating Officer',
-    badge: 'Operations, Documentation & Finance',
-    bio: '',
-    focus: '',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3XWqF15PtUweWAR-1WD4YKTEAG6nDjn34mA_z9zOvNKYf3gTSDOFuDiDhZv1z8my3NbVHCqk4Dy01-BZlI_j6pZUAl7rgJWAmXlb_aQYrOIzlgrV6_ic7uMZwi5I_Seewi8R_uCkdNIfzIuCTslSGTwKF1D540xEYsT2ygof12_m7Cmee0T6CSdzz1PmLDoPvQRZov8kejrnkt9zY5ClDHHQiJUihIT8ssrr-h75ZbBWDo7P7CQFH', // dummy image, same as office
-  },
 ];
 
-export const EXTENDED_LEADERSHIP: LeaderProfile[] = [
-  {
-    name: 'Dr. Elena Vance',
-    role: 'VP of Infrastructure & Autonomous Systems',
-    badge: 'Ex-Global Cloud Corp, PhD MIT',
-    bio: 'Expert in large-scale systems that stay in sync across data centers. Leads the engineering of self-healing systems that keep running even when servers go down.',
-    focus: 'System Reliability, Automatic Recovery',
-    image: IMAGES.elenaVance,
-  },
-  {
-    name: 'Marcus Thorne',
-    role: 'Chief Architect, High-Velocity Engines',
-    badge: 'Core Linux Kernel Contributor',
-    bio: 'Designed ultra-fast processing systems that handle millions of reliable operations per second.',
-    focus: 'Real-Time Data Processing, Core System Design',
-    image: IMAGES.marcusThorne,
-  },
-  {
-    name: 'Aaliyah Chen',
-    role: 'VP of Enterprise Security & Trust',
-    badge: 'SOC2 / Zero-Trust Authority',
-    bio: 'Leads security architecture that verifies every access request, protects sensitive data with encryption, and ensures regulatory compliance across global jurisdictions.',
-    focus: 'Verify-Everything Security, Regulatory Compliance',
-    image: IMAGES.aaliyahChen,
-  },
-];
+export const EXTENDED_LEADERSHIP: LeaderProfile[] = [];
 
 export const CAPABILITIES: CapabilityCard[] = [
   {

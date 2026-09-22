@@ -54,7 +54,7 @@ body {
   color: #131b2e;
 }
 
-h1, h2, h3 {
+.font-serif, h1, h2, h3, h4 {
   font-family: 'Playfair Display', serif;
 }
 

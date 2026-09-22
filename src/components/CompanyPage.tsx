@@ -12,7 +12,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#faf8ff] py-14 md:py-12 px-6 md:px-8 border-b border-[#e2e7ff]/60">
+      <section className="relative overflow-hidden bg-[#faf8ff] py-8 md:py-8 px-6 md:px-8 border-b border-[#e2e7ff]/60">
         <div className="absolute inset-0 bg-gradient-to-br from-[#e2dfff]/40 via-transparent to-[#e2e7ff]/30 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
@@ -48,7 +48,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Our Purpose & Direction (IMAGINE. INNOVATE. IMPACT.) */}
-      <section className="py-16 md:py-16 px-6 md:px-8 bg-white border-b border-[#e2e7ff]">
+      <section className="py-10 md:py-10 px-6 md:px-8 bg-white border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="text-center max-w-3xl mx-auto flex flex-col gap-3">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-widest">
@@ -123,7 +123,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Core Philosophy & Motto */}
-      <section className="bg-[#f2f3ff] py-16 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden" id="philosophy">
+      <section className="bg-[#f2f3ff] py-10 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden" id="philosophy">
         <img src={IMAGES.nexusLogo} alt="" className="absolute -right-20 -top-20 w-96 h-96 opacity-[0.03] rotate-12 pointer-events-none mix-blend-multiply" aria-hidden="true" />
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
@@ -191,7 +191,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Executive Leadership */}
-      <section className="py-16 md:py-16 px-6 md:px-8 bg-white border-b border-[#e2e7ff]" id="leadership">
+      <section className="py-10 md:py-10 px-6 md:px-8 bg-white border-b border-[#e2e7ff]" id="leadership">
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-3">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
@@ -205,65 +205,30 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto w-full">
             {FOUNDERS.map((leader) => (
               <div 
                 key={leader.name}
-                className="bg-[#faf8ff] rounded-2xl p-6 md:p-8 shadow-sm border border-[#e2e7ff] flex flex-col justify-between gap-6 hover:shadow-md transition-all"
+                className="bg-white rounded-2xl p-6 shadow-sm border border-[#e2e7ff] flex flex-col items-center text-center gap-4 hover:shadow-md transition-all"
               >
-                <div className="flex items-center gap-5">
-                  <div 
-                    className="w-20 h-20 rounded-2xl bg-cover bg-center shrink-0 shadow-md border-2 border-white"
-                    style={{ backgroundImage: `url('${leader.image}')` }}
-                    role="img"
-                    aria-label={leader.name}
-                  />
-                  <div>
-                    <h3 className="text-xl font-bold text-[#131b2e]">{leader.name}</h3>
-                    <p className="text-sm text-[#3525cd] font-semibold">{leader.role}</p>
-                    <span className="text-xs text-[#464555] mt-1 block font-medium">{leader.badge && <span>{leader.badge}</span>}</span>
-                  </div>
+                <div 
+                  className="w-24 h-24 rounded-full bg-cover bg-center shadow-md border border-[#dae2fd]"
+                  style={{ backgroundImage: `url('${leader.image}')` }}
+                  role="img"
+                  aria-label={leader.name}
+                />
+                <div className="flex flex-col gap-1">
+                  <h3 className="text-xl font-bold text-[#131b2e] font-serif">{leader.name}</h3>
+                  <p className="text-sm text-[#3525cd] font-semibold">{leader.role}</p>
                 </div>
-
-                {leader.bio && <p className="text-sm text-[#464555] leading-relaxed">{leader.bio}</p>}
-
-                {leader.focus && <div className="flex items-center gap-2 pt-4 border-t border-[#e2e7ff] text-xs text-[#464555]"><span className="font-semibold text-[#131b2e]">Focus:</span><span>{leader.focus}</span></div>}
               </div>
             ))}
           </div>
-
-          {/* Extended Advisory & Engineering Council */}
-          <div className="max-w-5xl mx-auto w-full pt-4">
-            <div className="flex items-center justify-between p-4 rounded-xl bg-[#f2f3ff] border border-[#e2e7ff]">
-              <div>
-                <span className="text-sm font-semibold text-[#131b2e] block">Technical Architecture Council</span>
-                <span className="text-xs text-[#464555]">Infrastructure and engineering leadership</span>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
-              {EXTENDED_LEADERSHIP.map((leader) => (
-                <div key={leader.name} className="bg-white p-5 rounded-xl border border-[#e2e7ff] shadow-sm flex flex-col gap-4">
-                  <div 
-                    className="w-full h-44 rounded-xl bg-cover bg-center border border-[#e2e7ff]"
-                    style={{ backgroundImage: `url('${leader.image}')` }}
-                    role="img"
-                    aria-label={leader.name}
-                  />
-                  <div>
-                    <h4 className="font-bold text-base text-[#131b2e]">{leader.name}</h4>
-                    <p className="text-xs text-[#006a61] font-semibold">{leader.role}</p>
-                    <p className="text-xs text-[#464555] mt-2 leading-relaxed">{leader.bio}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
-        </div>
       </section>
 
       {/* Global Scale & Customer-Centric Philosophy */}
-      <section className="bg-[#f2f3ff] py-16 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="bg-[#f2f3ff] py-10 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-12 flex flex-col gap-6 max-w-3xl">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
@@ -296,7 +261,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Flagship Product: academicOS Showcase */}
-      <section className="py-16 md:py-16 px-6 md:px-8 bg-white">
+      <section className="py-10 md:py-10 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-[#3525cd] via-[#4f46e5] to-[#3323cc] rounded-3xl p-8 sm:p-12 md:p-16 text-slate-900 relative overflow-hidden shadow-xl">
             <div className="absolute -right-16 -bottom-16 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />
