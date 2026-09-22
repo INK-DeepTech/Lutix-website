@@ -20,7 +20,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           <div className="flex items-center gap-3">
             <img 
               alt="Lutix" 
-              className="h-32 w-auto object-contain " 
+              className="h-32 w-auto object-contain mix-blend-darken" 
               src="/logo-horizontal.png"
             />
           </div>

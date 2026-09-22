@@ -31,7 +31,7 @@ export const FOUNDERS: LeaderProfile[] = [
     badge: '',
     bio: '',
     focus: '',
-    image: '/cto.jpg',
+    image: '/coo.jpg',
   },
   {
     name: 'Karthik Balaji',
@@ -39,7 +39,7 @@ export const FOUNDERS: LeaderProfile[] = [
     badge: '',
     bio: '',
     focus: '',
-    image: '/coo.jpg',
+    image: '/cto.jpg',
   },
 ];
 
