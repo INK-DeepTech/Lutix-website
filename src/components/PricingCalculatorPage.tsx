@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { PageRoute, BillingCycle } from '../types';
-import { Check, ArrowRight, Database } from 'lucide-react';
+import { Check, ArrowRight, Database, Sparkles } from 'lucide-react';
 import { Tooltip } from './Tooltip';
 
 interface PricingCalculatorPageProps {
