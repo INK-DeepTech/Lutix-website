@@ -349,7 +349,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
       {/* Core Capabilities Feature Grid */}
       <section className="bg-[#f2f3ff] py-8 md:py-10 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden">
-        <img src={IMAGES.nexusLogo} alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] -rotate-12 pointer-events-none mix-blend-multiply" aria-hidden="true" />
+        <img src={IMAGES.nexusLogo} alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] -rotate-12 pointer-events-none " aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl text-[#131b2e] font-bold tracking-tight">

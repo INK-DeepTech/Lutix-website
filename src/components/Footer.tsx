@@ -20,8 +20,8 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           <div className="flex items-center gap-3">
             <img 
               alt="Lutix" 
-              className="h-32 w-auto object-contain mix-blend-darken" 
-              src="/logo-stacked.jpg"
+              className="h-32 w-auto object-contain " 
+              src="/logo-horizontal.png"
             />
           </div>
           <p className="text-sm text-[#464555] leading-relaxed max-w-sm">
