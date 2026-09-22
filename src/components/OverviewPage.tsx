@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowUpRight, Shield, Activity, Zap } from 'lucide-react';
 import { FOUNDERS } from '../data/content';
 
 interface OverviewPageProps {
@@ -7,9 +7,11 @@ interface OverviewPageProps {
 }
 
 export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => {
+  const [activeTab, setActiveTab] = useState<'engineering' | 'finance' | 'operations'>('engineering');
+
   return (
     <div className="w-full bg-[#0a0a0a] text-white min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - Keeps exact dark config */}
       <section className="relative w-full min-h-[90vh] flex flex-col justify-center px-8 md:px-16 overflow-hidden">
         {/* Background Image / Logo styling */}
         <div className="absolute inset-0 z-0 flex items-center justify-end p-20 opacity-20 pointer-events-none">
@@ -42,82 +44,165 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
         </div>
       </section>
 
-      {/* Massive Whitespace Content Section */}
-      <section className="w-full bg-[#111111] py-40 px-8 md:px-16 border-t border-gray-900">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
-          <div className="space-y-12">
-            <h2 className="font-serif-brand text-5xl md:text-7xl font-bold uppercase tracking-tighter leading-tight">
-              Academic OS
+      {/* LIGHT THEME RESTORATION STARTS HERE */}
+      <div className="bg-white text-slate-900 w-full relative z-20">
+        
+        {/* Social Proof Metrics - Light Theme massive spacing */}
+        <section className="py-24 px-8 md:px-16 border-b border-gray-100">
+          <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div className="space-y-4">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter">$4.2B+</div>
+              <div className="text-sm text-slate-500 font-bold uppercase tracking-widest">Processed Annually</div>
+            </div>
+            <div className="space-y-4">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter">99.99%</div>
+              <div className="text-sm text-slate-500 font-bold uppercase tracking-widest">Guaranteed Uptime</div>
+            </div>
+            <div className="space-y-4">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter">10x</div>
+              <div className="text-sm text-slate-500 font-bold uppercase tracking-widest">Faster Deployments</div>
+            </div>
+            <div className="space-y-4">
+              <div className="text-5xl md:text-6xl font-black text-slate-900 tracking-tighter">2,500+</div>
+              <div className="text-sm text-slate-500 font-bold uppercase tracking-widest">Enterprise Clients</div>
+            </div>
+          </div>
+        </section>
+
+        {/* Dynamic Department Solution Tabs - Crisp light theme */}
+        <section className="py-32 px-8 md:px-16 max-w-7xl mx-auto w-full">
+          <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
+            <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
+              Solutions for Every Team
+            </span>
+            <h2 className="font-serif-brand text-4xl md:text-6xl font-bold text-slate-900 tracking-tight leading-tight">
+              Tailored Solutions for Every Department
             </h2>
-            <p className="text-gray-400 text-lg md:text-2xl leading-relaxed max-w-lg font-light">
-              Link your CRM, student records, ERP, and internal databases into automated workflows that run complex business processes without anyone being the bottleneck.
-            </p>
-            <div className="pt-8">
-               <button 
+          </div>
+
+          <div className="flex justify-center mb-16 flex-wrap gap-4">
+            <div className="inline-flex p-2 bg-slate-50 rounded-full gap-2 border border-slate-200">
+              {['engineering', 'finance', 'operations'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab as any)}
+                  className={`px-8 py-3 rounded-full text-sm font-bold uppercase tracking-widest transition-all ${
+                    activeTab === tab
+                      ? 'bg-black text-white shadow-md'
+                      : 'text-slate-500 hover:text-black'
+                  }`}
+                >
+                  For {tab}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Render Tab Content based on selection */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div className="space-y-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-slate-100 text-slate-900 rounded-full text-xs font-bold uppercase tracking-widest">
+                <span>
+                  {activeTab === 'engineering' ? 'Engineering Velocity' : activeTab === 'finance' ? 'Financial Control' : 'Operational Harmony'}
+                </span>
+              </div>
+              <h3 className="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+                {activeTab === 'engineering' && 'Automatic code testing, deployment, and updates.'}
+                {activeTab === 'finance' && 'Automated billing, reconciliation, and reporting.'}
+                {activeTab === 'operations' && 'Connect workflows across every department.'}
+              </h3>
+              <p className="text-lg text-slate-600 leading-relaxed font-light">
+                {activeTab === 'engineering' && 'Speed up your releases with AI-powered testing and infrastructure that automatically scales up or down based on demand.'}
+                {activeTab === 'finance' && 'Close your books faster with real-time revenue recognition and automated expense tracking that scales with your business.'}
+                {activeTab === 'operations' && 'Link your CRM, student records, ERP, and internal databases into automated workflows that run complex business processes without anyone being the bottleneck.'}
+              </p>
+              
+              <button 
                 onClick={() => onRouteChange('solutions-matrix')}
-                className="px-8 py-4 bg-white text-black text-sm font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors flex items-center gap-2"
+                className="mt-8 px-8 py-4 bg-black text-white text-sm font-bold tracking-widest uppercase hover:bg-slate-800 transition-colors flex items-center gap-2"
               >
                 Explore Features <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
+            
+            <div className="bg-slate-50 p-16 md:p-24 rounded-3xl border border-slate-100 flex items-center justify-center">
+              <img 
+                className="w-full max-w-sm object-contain opacity-90 mix-blend-multiply hover:scale-105 transition-transform duration-500" 
+                alt="Feature Illustration" 
+                src="/logo-stacked.png"
+              />
+            </div>
           </div>
-          <div className="bg-black/50 p-24 flex items-center justify-center border border-gray-800 rounded-3xl backdrop-blur-sm">
-            <img src="/logo-stacked.png" alt="Lutix abstract" className="w-full max-w-xs object-contain opacity-60 hover:opacity-100 transition-all duration-700" onError={(e) => (e.currentTarget.src = '/logo-horizontal.png')} />
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Team / Leadership Section */}
-      <section className="w-full bg-[#0a0a0a] py-40 px-8 md:px-16 border-t border-gray-900">
-        <div className="max-w-7xl mx-auto space-y-32">
-          <div className="text-center space-y-6">
-            <p className="text-gray-400 uppercase tracking-[0.3em] text-sm font-bold">The minds behind Lutix</p>
-            <h2 className="font-serif-brand text-6xl md:text-8xl font-black uppercase tracking-tighter">
-              Leadership
-            </h2>
-          </div>
+        {/* Core Capabilities Feature Grid */}
+        <section className="bg-slate-50 py-32 px-8 md:px-16 border-y border-slate-100">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center max-w-4xl mx-auto mb-20 space-y-6">
+              <h2 className="font-serif-brand text-4xl md:text-6xl font-bold text-slate-900 tracking-tight">
+                A Platform Built for Scale
+              </h2>
+              <p className="text-lg text-slate-500 font-light max-w-2xl mx-auto">
+                Discover the core capabilities that make Lutix the choice for modern institutions.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
-            {FOUNDERS.map((founder, idx) => (
-              <div key={idx} className="group cursor-pointer flex flex-col items-center text-center">
-                <div className="relative w-full aspect-[4/5] overflow-hidden bg-[#1a1a1a] mb-8 border border-gray-800">
-                  <img 
-                    src={founder.image} 
-                    alt={founder.name}
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 scale-100 group-hover:scale-105"
-                  />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+              <div className="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-900 mb-8 group-hover:scale-110 transition-transform">
+                  <Zap className="w-8 h-8" />
                 </div>
-                <h3 className="font-serif-brand text-3xl font-bold uppercase tracking-tight mb-3">
-                  {founder.name}
-                </h3>
-                <p className="text-gray-500 text-sm uppercase tracking-[0.2em] font-semibold">
-                  {founder.role}
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Intelligent Workflows</h3>
+                <p className="text-slate-600 leading-relaxed font-light">
+                  Smart workflows that detect and fix common errors automatically — so your team isn't woken up at 2 AM.
                 </p>
               </div>
-            ))}
+
+              <div className="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-900 mb-8 group-hover:scale-110 transition-transform">
+                  <Shield className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Enterprise Security</h3>
+                <p className="text-slate-600 leading-relaxed font-light">
+                  Your data is encrypted everywhere — in storage and in transit. Access is controlled by role, compliance is monitored 24/7.
+                </p>
+              </div>
+
+              <div className="p-10 bg-white rounded-3xl border border-slate-100 shadow-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-16 h-16 rounded-2xl bg-slate-50 flex items-center justify-center text-slate-900 mb-8 group-hover:scale-110 transition-transform">
+                  <Activity className="w-8 h-8" />
+                </div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Real-Time Telemetry</h3>
+                <p className="text-slate-600 leading-relaxed font-light">
+                  See every automated transaction as it happens, set custom alerts, and dive deep into performance data — all in real time.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-      
-      {/* High-Converting CTA Banner */}
-      <section className="py-40 px-8 md:px-16 bg-[#111111] border-t border-gray-900">
-        <div className="max-w-5xl mx-auto text-center space-y-12">
-          <h2 className="font-serif-brand text-5xl md:text-7xl font-bold uppercase tracking-tighter">
-            Ready to Modernize?
-          </h2>
-          <p className="text-gray-400 text-xl leading-relaxed max-w-2xl mx-auto font-light">
-            Join thousands of engineering, academic, and finance teams that have streamlined their operations on one unified platform.
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 pt-12">
-            <button 
-              onClick={() => onRouteChange('demo-request')}
-              className="px-10 py-5 bg-white text-black text-sm font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
-            >
-              Book a Free Consultation
-            </button>
+        </section>
+
+        {/* High-Converting CTA Banner */}
+        <section className="py-32 px-8 md:px-16 bg-white">
+          <div className="max-w-6xl mx-auto bg-black text-white rounded-[3rem] p-16 md:p-24 text-center relative overflow-hidden">
+            <div className="relative z-10 max-w-3xl mx-auto space-y-8">
+              <h2 className="font-serif-brand text-5xl md:text-7xl font-bold tracking-tighter">
+                READY TO MODERNIZE?
+              </h2>
+              <p className="text-xl text-gray-400 font-light leading-relaxed">
+                Join thousands of engineering, academic, and finance teams that have streamlined their operations on one unified platform.
+              </p>
+              <div className="flex justify-center pt-8">
+                <button 
+                  onClick={() => onRouteChange('demo-request')}
+                  className="px-10 py-5 bg-white text-black text-sm font-bold tracking-widest uppercase hover:bg-gray-200 transition-colors"
+                >
+                  Book a Free Consultation
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </div>
   );
 };
