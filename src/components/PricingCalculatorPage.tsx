@@ -59,7 +59,6 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
             Transparent Scaling
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#131b2e] tracking-tight max-w-3xl">
-            <img src="/bird-icon.png" alt="" className="h-8 w-8 mr-3 inline-block object-contain mix-blend-darken" aria-hidden="true" />
             Pricing & Plans
           </h1>
           <p className="text-base sm:text-lg text-[#464555] max-w-2xl leading-relaxed">
@@ -275,7 +274,6 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
               Dynamic Sizing
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-[#131b2e] mt-1">
-              <img src="/bird-icon.png" alt="" className="h-6 w-6 mr-2 inline-block object-contain mix-blend-darken" aria-hidden="true" />
               Interactive Cost & Capacity Estimator
             </h2>
             <p className="text-sm sm:text-base text-[#464555] mt-1">

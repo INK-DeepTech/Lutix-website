@@ -71,7 +71,6 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
             <span>Consultation</span>
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#131b2e] tracking-tight font-serif-brand">
-            <img src="/bird-icon.png" alt="" className="h-8 w-8 mr-3 inline-block object-contain mix-blend-darken" aria-hidden="true" />
             Let's discuss your ecosystem.
           </h1>
           <p className="text-base sm:text-lg text-[#464555] leading-relaxed max-w-2xl mt-2">
