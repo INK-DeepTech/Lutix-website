@@ -14,13 +14,13 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#f2f3ff] pt-14 pb-20 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="relative overflow-hidden bg-[#f2f3ff] pt-14 pb-20 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="absolute inset-0 opacity-40 pointer-events-none">
           <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#3525cd]/10 rounded-full blur-3xl" />
           <div className="absolute top-1/3 right-10 w-[400px] h-[400px] bg-[#006a61]/10 rounded-full blur-3xl" />
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
           <div className="lg:col-span-7 flex flex-col items-start gap-6">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#3525cd]/10 text-[#3525cd] rounded-full text-xs font-semibold">
               <span className="material-symbols-outlined text-[16px]">bolt</span>
@@ -144,7 +144,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* Dynamic Department Solution Tabs */}
-      <section className="py-20 md:py-24 px-6 md:px-8 max-w-7xl mx-auto w-full">
+      <section className="py-12 md:py-16 px-6 md:px-8 max-w-7xl mx-auto w-full">
         <div className="text-center max-w-3xl mx-auto mb-12">
           <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider block mb-2">
             Solutions for Every Team
@@ -204,7 +204,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
         {/* Tab 1: Engineering */}
         {activeTab === 'engineering' && (
-          <div id="tab-panel-engineering" role="tabpanel" aria-labelledby="tab-engineering" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
+          <div id="tab-panel-engineering" role="tabpanel" aria-labelledby="tab-engineering" className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#3525cd]/10 text-[#3525cd] rounded-full text-xs font-semibold">
                 <span className="material-symbols-outlined text-[16px]">terminal</span>
@@ -252,7 +252,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
         {/* Tab 2: Finance */}
         {activeTab === 'finance' && (
-          <div id="tab-panel-finance" role="tabpanel" aria-labelledby="tab-finance" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
+          <div id="tab-panel-finance" role="tabpanel" aria-labelledby="tab-finance" className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#3525cd]/10 text-[#3525cd] rounded-full text-xs font-semibold">
                 <span className="material-symbols-outlined text-[16px]">payments</span>
@@ -300,7 +300,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
 
         {/* Tab 3: Operations */}
         {activeTab === 'operations' && (
-          <div id="tab-panel-operations" role="tabpanel" aria-labelledby="tab-operations" className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
+          <div id="tab-panel-operations" role="tabpanel" aria-labelledby="tab-operations" className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center bg-white p-6 sm:p-10 rounded-2xl shadow-md border border-[#dae2fd] animate-in fade-in duration-200">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#3525cd]/10 text-[#3525cd] rounded-full text-xs font-semibold">
                 <span className="material-symbols-outlined text-[16px]">hub</span>
@@ -348,7 +348,8 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* Core Capabilities Feature Grid */}
-      <section className="bg-[#f2f3ff] py-20 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="bg-[#f2f3ff] py-12 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden">
+        <img src={IMAGES.nexusLogo} alt="" className="absolute -left-20 top-1/2 -translate-y-1/2 w-96 h-96 opacity-[0.03] -rotate-12 pointer-events-none mix-blend-multiply" aria-hidden="true" />
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl text-[#131b2e] font-bold tracking-tight">
@@ -394,7 +395,7 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       </section>
 
       {/* High-Converting CTA Banner */}
-      <section className="py-20 px-6 md:px-8">
+      <section className="py-12 px-6 md:px-8">
         <div className="max-w-7xl mx-auto bg-slate-50 text-slate-900 border border-slate-200 rounded-3xl p-10 md:p-14 text-center text-slate-900 relative overflow-hidden shadow-xl">
           <div className="absolute inset-0 opacity-10 pointer-events-none">
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-white rounded-full blur-3xl" />

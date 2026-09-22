@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PageRoute } from '../types';
 import { FOUNDERS, EXTENDED_LEADERSHIP, IMAGES } from '../data/content';
 import { ArrowRight, CheckCircle2, Globe, Users, Shield, Sparkles, Building, Layers } from 'lucide-react';
@@ -9,15 +9,13 @@ interface CompanyPageProps {
 }
 
 export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
-  const [showExtendedTeam, setShowExtendedTeam] = useState(false);
-
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#faf8ff] py-14 md:py-20 px-6 md:px-8 border-b border-[#e2e7ff]/60">
+      <section className="relative overflow-hidden bg-[#faf8ff] py-14 md:py-12 px-6 md:px-8 border-b border-[#e2e7ff]/60">
         <div className="absolute inset-0 bg-gradient-to-br from-[#e2dfff]/40 via-transparent to-[#e2e7ff]/30 pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
           <div className="lg:col-span-12 flex flex-col gap-6 text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#131b2e] tracking-tight font-semibold leading-[1.15]">
               Building smart, reliable software for modern institutions.
@@ -43,20 +41,15 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
                 Meet Leadership
               </a>
 
-              <button 
-                onClick={() => onRouteChange('solutions-matrix')}
-                className="text-sm font-semibold text-[#3525cd] hover:underline px-2 py-3"
-              >
-                academicOS Solutions →
-              </button>
+              
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Purpose & Direction (IMAGINE. INNOVATE. IMPACT.) */}
-      <section className="py-16 md:py-24 px-6 md:px-8 bg-white border-b border-[#e2e7ff]">
-        <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <section className="py-16 md:py-16 px-6 md:px-8 bg-white border-b border-[#e2e7ff]">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="text-center max-w-3xl mx-auto flex flex-col gap-3">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-widest">
               Our Purpose & Direction
@@ -69,7 +62,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
             </p>
           </div>
 
-          <div className="bg-[#faf8ff] rounded-2xl p-8 md:p-12 shadow-sm border border-[#e2e7ff] flex flex-col gap-8">
+          <div className="bg-[#faf8ff] rounded-2xl p-8 md:p-12 shadow-sm border border-[#e2e7ff] flex flex-col gap-4">
             <div className="flex flex-col gap-2 max-w-3xl">
               <span className="text-xs font-semibold text-[#006a61] uppercase tracking-wider">Our Vision</span>
               <h3 className="text-2xl text-[#131b2e] font-semibold">
@@ -130,8 +123,9 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Core Philosophy & Motto */}
-      <section className="bg-[#f2f3ff] py-16 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]" id="philosophy">
-        <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <section className="bg-[#f2f3ff] py-16 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff] relative overflow-hidden" id="philosophy">
+        <img src={IMAGES.nexusLogo} alt="" className="absolute -right-20 -top-20 w-96 h-96 opacity-[0.03] rotate-12 pointer-events-none mix-blend-multiply" aria-hidden="true" />
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
             <div className="max-w-xl">
               <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">Core Philosophy</span>
@@ -197,8 +191,8 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Executive Leadership */}
-      <section className="py-16 md:py-24 px-6 md:px-8 bg-white border-b border-[#e2e7ff]" id="leadership">
-        <div className="max-w-7xl mx-auto flex flex-col gap-12">
+      <section className="py-16 md:py-16 px-6 md:px-8 bg-white border-b border-[#e2e7ff]" id="leadership">
+        <div className="max-w-7xl mx-auto flex flex-col gap-6">
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-3">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
               Executive Leadership
@@ -211,7 +205,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto w-full">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto w-full">
             {FOUNDERS.map((leader) => (
               <div 
                 key={leader.name}
@@ -227,20 +221,13 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
                   <div>
                     <h3 className="text-xl font-bold text-[#131b2e]">{leader.name}</h3>
                     <p className="text-sm text-[#3525cd] font-semibold">{leader.role}</p>
-                    <span className="text-xs text-[#464555] mt-1 block font-medium">
-                      {leader.badge}
-                    </span>
+                    <span className="text-xs text-[#464555] mt-1 block font-medium">{leader.badge && <span>{leader.badge}</span>}</span>
                   </div>
                 </div>
 
-                <p className="text-sm text-[#464555] leading-relaxed">
-                  {leader.bio}
-                </p>
+                {leader.bio && <p className="text-sm text-[#464555] leading-relaxed">{leader.bio}</p>}
 
-                <div className="flex items-center gap-2 pt-4 border-t border-[#e2e7ff] text-xs text-[#464555]">
-                  <span className="font-semibold text-[#131b2e]">Focus:</span>
-                  <span>{leader.focus}</span>
-                </div>
+                {leader.focus && <div className="flex items-center gap-2 pt-4 border-t border-[#e2e7ff] text-xs text-[#464555]"><span className="font-semibold text-[#131b2e]">Focus:</span><span>{leader.focus}</span></div>}
               </div>
             ))}
           </div>
@@ -252,41 +239,32 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
                 <span className="text-sm font-semibold text-[#131b2e] block">Technical Architecture Council</span>
                 <span className="text-xs text-[#464555]">Infrastructure and engineering leadership</span>
               </div>
-              <button 
-                onClick={() => setShowExtendedTeam(!showExtendedTeam)}
-                className="text-xs font-semibold px-4 py-2 rounded-lg bg-white text-[#3525cd] border border-[#dae2fd] hover:bg-[#e2e7ff] transition-all"
-                aria-expanded={showExtendedTeam}
-              >
-                {showExtendedTeam ? 'Hide Advisory Council' : 'View Engineering Council (3)'}
-              </button>
             </div>
 
-            {showExtendedTeam && (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 animate-in fade-in duration-200">
-                {EXTENDED_LEADERSHIP.map((leader) => (
-                  <div key={leader.name} className="bg-white p-5 rounded-xl border border-[#e2e7ff] shadow-sm flex flex-col gap-4">
-                    <div 
-                      className="w-full h-44 rounded-xl bg-cover bg-center border border-[#e2e7ff]"
-                      style={{ backgroundImage: `url('${leader.image}')` }}
-                      role="img"
-                      aria-label={leader.name}
-                    />
-                    <div>
-                      <h4 className="font-bold text-base text-[#131b2e]">{leader.name}</h4>
-                      <p className="text-xs text-[#006a61] font-semibold">{leader.role}</p>
-                      <p className="text-xs text-[#464555] mt-2 leading-relaxed">{leader.bio}</p>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+              {EXTENDED_LEADERSHIP.map((leader) => (
+                <div key={leader.name} className="bg-white p-5 rounded-xl border border-[#e2e7ff] shadow-sm flex flex-col gap-4">
+                  <div 
+                    className="w-full h-44 rounded-xl bg-cover bg-center border border-[#e2e7ff]"
+                    style={{ backgroundImage: `url('${leader.image}')` }}
+                    role="img"
+                    aria-label={leader.name}
+                  />
+                  <div>
+                    <h4 className="font-bold text-base text-[#131b2e]">{leader.name}</h4>
+                    <p className="text-xs text-[#006a61] font-semibold">{leader.role}</p>
+                    <p className="text-xs text-[#464555] mt-2 leading-relaxed">{leader.bio}</p>
                   </div>
-                ))}
-              </div>
-            )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Global Scale & Customer-Centric Philosophy */}
-      <section className="bg-[#f2f3ff] py-16 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <section className="bg-[#f2f3ff] py-16 md:py-16 px-6 md:px-8 border-b border-[#e2e7ff]">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
           <div className="lg:col-span-12 flex flex-col gap-6 max-w-3xl">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
               Global Scale
@@ -318,7 +296,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Flagship Product: academicOS Showcase */}
-      <section className="py-16 md:py-24 px-6 md:px-8 bg-white">
+      <section className="py-16 md:py-16 px-6 md:px-8 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="bg-gradient-to-r from-[#3525cd] via-[#4f46e5] to-[#3323cc] rounded-3xl p-8 sm:p-12 md:p-16 text-slate-900 relative overflow-hidden shadow-xl">
             <div className="absolute -right-16 -bottom-16 w-96 h-96 bg-white/10 rounded-full blur-3xl pointer-events-none" />

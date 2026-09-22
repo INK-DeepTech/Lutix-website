@@ -54,6 +54,10 @@ body {
   color: #131b2e;
 }
 
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+}
+
 .font-headline-xl {
   font-size: 40px;
   line-height: 48px;

@@ -14,13 +14,13 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
 
   return (
     <footer className="w-full bg-[#f2f3ff] border-t border-[#dae2fd] py-12 text-[#464555]" role="contentinfo">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-8 mb-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-12 gap-4 mb-10">
         {/* Brand Summary */}
         <div className="md:col-span-4 space-y-4">
           <div className="flex items-center gap-3">
             <img 
               alt="Lutix" 
-              className="h-24 w-auto object-contain mix-blend-multiply" 
+              className="h-32 w-auto object-contain mix-blend-multiply" 
               src="/logo-stacked.jpg"
             />
           </div>

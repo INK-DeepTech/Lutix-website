@@ -20,18 +20,26 @@ export const FOUNDERS: LeaderProfile[] = [
   {
     name: 'Iswarya',
     role: 'Co-Founder & Chief Executive Officer',
-    badge: 'Ex-Enterprise Strategy, Institutional Systems',
-    bio: 'Iswarya leads Lutix with a strategic vision centered on customer-first enterprise software. Her background in scaling large institutional solutions has shaped Lutix into a trusted partner for global universities and corporations alike.',
-    focus: 'Strategy, Growth, Institutional Partnerships',
+    badge: '',
+    bio: '',
+    focus: '',
     image: IMAGES.iswarya,
   },
   {
     name: 'Nithishkumar',
     role: 'Co-Founder & Chief Technology Officer',
-    badge: 'Ex-Principal Architect, Distributed Cloud Systems',
-    bio: 'Nithishkumar oversees all technical operations, product architecture, and engineering execution. He is passionate about crafting high-performance, resilient codebases that power flagship offerings like academicOS.',
-    focus: 'Core Architecture, Engineering, Security',
+    badge: '',
+    bio: '',
+    focus: '',
     image: IMAGES.nithishkumar,
+  },
+  {
+    name: 'Karthik Balaji',
+    role: 'Chief Operating Officer',
+    badge: 'Operations, Documentation & Finance',
+    bio: '',
+    focus: '',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD3XWqF15PtUweWAR-1WD4YKTEAG6nDjn34mA_z9zOvNKYf3gTSDOFuDiDhZv1z8my3NbVHCqk4Dy01-BZlI_j6pZUAl7rgJWAmXlb_aQYrOIzlgrV6_ic7uMZwi5I_Seewi8R_uCkdNIfzIuCTslSGTwKF1D540xEYsT2ygof12_m7Cmee0T6CSdzz1PmLDoPvQRZov8kejrnkt9zY5ClDHHQiJUihIT8ssrr-h75ZbBWDo7P7CQFH', // dummy image, same as office
   },
 ];
 

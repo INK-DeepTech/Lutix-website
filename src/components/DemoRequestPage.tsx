@@ -86,7 +86,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
   return (
     <div className="flex flex-col w-full bg-[#faf8ff] text-[#131b2e]">
       {/* Top Banner / Header */}
-      <section className="w-full bg-[#f2f3ff] py-14 md:py-20 px-6 md:px-8 border-b border-[#e2e7ff]">
+      <section className="w-full bg-[#f2f3ff] py-14 md:py-12 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex flex-col gap-3 max-w-2xl">
             <div className="flex items-center gap-2">
@@ -124,8 +124,8 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
       </section>
 
       {/* Main Interactive Studio & Booking Section */}
-      <section className="w-full py-16 md:py-20 px-6 md:px-8 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+      <section className="w-full py-16 md:py-12 px-6 md:px-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Form: 3-step Wizard */}
           <div className="lg:col-span-8 bg-white p-6 sm:p-10 rounded-3xl border border-[#dae2fd] shadow-md">
             <form onSubmit={handleSubmit} noValidate className="space-y-10">
