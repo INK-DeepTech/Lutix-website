@@ -10,7 +10,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
     <footer className="bg-slate-50 dark:bg-slate-900 py-16 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-2 space-y-6">
-          <img alt="Lutix" className="h-12 w-auto object-contain dark:invert" src="/logo-horizontal.png" />
+          <img alt="Lutix" className="h-24 md:h-32 w-auto object-contain dark:invert" src="/logo-horizontal.png" />
           <p className="text-slate-500 dark:text-slate-400 text-sm max-w-sm leading-relaxed">
             Carefully crafted software that never lets you down. Build your organization's future with our intelligent workflows and resilient infrastructure.
           </p>

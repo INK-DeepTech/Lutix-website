@@ -19,14 +19,14 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, the
 
   return (
     <header className="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <button 
           onClick={() => onRouteChange('home')}
           className="flex items-center"
         >
           <img 
             alt="Lutix" 
-            className="h-10 w-auto object-contain dark:invert transition-all" 
+            className="h-16 md:h-24 lg:h-28 w-auto object-contain dark:invert transition-all" 
             src="/logo-horizontal.png"
           />
         </button>
