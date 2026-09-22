@@ -1,26 +1,30 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import React, { useState, useEffect } from 'react';
 import { PageRoute } from './types';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
-import { CompanyPage } from './components/CompanyPage';
-import { OverviewPage } from './components/OverviewPage';
-import { SolutionsMatrixPage } from './components/SolutionsMatrixPage';
+import { HomePage } from './components/HomePage';
+import { AcademicOSPage } from './components/AcademicOSPage';
 import { PricingCalculatorPage } from './components/PricingCalculatorPage';
 import { DemoRequestPage } from './components/DemoRequestPage';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<PageRoute>(() => {
     const hash = window.location.hash.replace('#', '') as PageRoute;
-    if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request'].includes(hash)) {
+    if (['home', 'academic-os', 'pricing', 'demo'].includes(hash)) {
       return hash;
     }
-    return 'company';
+    return 'home';
   });
+  
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [theme]);
 
   const handleRouteChange = (route: PageRoute) => {
     setCurrentRoute(route);
@@ -31,7 +35,7 @@ export default function App() {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '') as PageRoute;
-      if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request'].includes(hash)) {
+      if (['home', 'academic-os', 'pricing', 'demo'].includes(hash)) {
         setCurrentRoute(hash);
       }
     };
@@ -39,37 +43,18 @@ export default function App() {
     return () => window.removeEventListener('hashchange', onHashChange);
   }, []);
 
-  useEffect(() => {
-    const titles: Partial<Record<PageRoute, string>> = {
-      'company': 'Lutix — About Us',
-      'overview': 'Lutix — Platform Overview',
-      'solutions-matrix': 'Lutix — Solutions & Capabilities',
-      'pricing-calculator': 'Lutix — Pricing & Plans',
-      'demo-request': 'Lutix — Book a Demo',
-    };
-    document.title = titles[currentRoute] || 'Lutix — Enterprise Software';
-  }, [currentRoute]);
-
   return (
-    <div className="min-h-screen flex flex-col bg-[#faf8ff] text-[#131b2e] antialiased selection:bg-[#e2dfff] selection:text-[#0f0069]">
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[#3525cd] focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold"
-      >
-        Skip to main content
-      </a>
-      <Header currentRoute={currentRoute} onRouteChange={handleRouteChange} />
+    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-white antialiased transition-colors duration-300">
+      <Header currentRoute={currentRoute} onRouteChange={handleRouteChange} theme={theme} setTheme={setTheme} />
 
-      <main className="flex-1 pt-16" id="main-content">
-        {currentRoute === 'company' && <CompanyPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'overview' && <OverviewPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'solutions-matrix' && <SolutionsMatrixPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'pricing-calculator' && <PricingCalculatorPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'demo-request' && <DemoRequestPage onRouteChange={handleRouteChange} />}
+      <main className="flex-1" id="main-content">
+        {currentRoute === 'home' && <HomePage onRouteChange={handleRouteChange} />}
+        {currentRoute === 'academic-os' && <AcademicOSPage onRouteChange={handleRouteChange} />}
+        {currentRoute === 'pricing' && <PricingCalculatorPage onRouteChange={handleRouteChange} />}
+        {currentRoute === 'demo' && <DemoRequestPage onRouteChange={handleRouteChange} />}
       </main>
 
       <Footer onRouteChange={handleRouteChange} />
     </div>
   );
 }
-

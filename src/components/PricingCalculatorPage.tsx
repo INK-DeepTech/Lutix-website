@@ -1,7 +1,11 @@
-import React, { useState, useMemo } from 'react';
 import { PageRoute, BillingCycle } from '../types';
+
+import React, { useState, useMemo } from 'react';
+
 import { Check, ArrowRight, Database, Sparkles } from 'lucide-react';
 import { Tooltip } from './Tooltip';
+
+
 
 interface PricingCalculatorPageProps {
   onRouteChange: (route: PageRoute) => void;
@@ -146,7 +150,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
 
             <div className="pt-8">
               <button
-                onClick={() => onRouteChange('demo-request')}
+                onClick={() => onRouteChange('demo')}
                 className="w-full py-3 rounded-xl bg-[#e2e7ff] text-[#131b2e] font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
               >
                 Deploy Growth Plan
@@ -204,7 +208,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
 
             <div className="pt-8">
               <button
-                onClick={() => onRouteChange('demo-request')}
+                onClick={() => onRouteChange('demo')}
                 className="w-full py-3.5 rounded-xl bg-[#3525cd] text-white font-semibold text-xs sm:text-sm hover:bg-[#4d44e3] transition-all shadow-md flex items-center justify-center gap-2"
               >
                 <span>Start 14-Day Free Trial</span>
@@ -256,7 +260,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
 
             <div className="pt-8">
               <button
-                onClick={() => onRouteChange('demo-request')}
+                onClick={() => onRouteChange('demo')}
                 className="w-full py-3 rounded-xl bg-[#e2e7ff] text-[#131b2e] font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
               >
                 Contact Architecture Team

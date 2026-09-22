@@ -1,10 +1,4 @@
-export type PageRoute = 
-  | 'company'
-  | 'overview'
-  | 'solutions-matrix'
-  | 'pricing-calculator'
-  | 'demo-request'
- ;
+export type PageRoute = 'home' | 'academic-os' | 'pricing' | 'demo';
 
 export type Department = 'all' | 'engineering' | 'revenue' | 'security' | 'product';
 

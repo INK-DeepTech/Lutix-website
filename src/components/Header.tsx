@@ -1,29 +1,32 @@
 import React from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, Sun, Moon } from 'lucide-react';
+import { PageRoute } from '../types';
 
 interface HeaderProps {
-  currentRoute: string;
-  onRouteChange: (route: any) => void;
+  currentRoute: PageRoute;
+  onRouteChange: (route: PageRoute) => void;
+  theme: 'light' | 'dark';
+  setTheme: (theme: 'light' | 'dark') => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) => {
-  const navLinks = [
-    { route: 'overview', label: 'Home' },
-    { route: 'company', label: 'About' },
-    { route: 'pricing', label: 'Plans' },
-    { route: 'demo-request', label: 'Contact' }
+export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, theme, setTheme }) => {
+  const navLinks: { route: PageRoute; label: string }[] = [
+    { route: 'home', label: 'Home' },
+    { route: 'academic-os', label: 'Academic OS' },
+    { route: 'pricing', label: 'Pricing' },
+    { route: 'demo', label: 'Demo' }
   ];
 
   return (
-    <header className="w-full bg-black text-white sticky top-0 z-50 border-b border-gray-900">
-      <div className="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+    <header className="w-full bg-white dark:bg-slate-900 text-slate-900 dark:text-white sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <button 
-          onClick={() => onRouteChange('overview')}
-          className="flex items-center bg-white/5 px-4 py-2 rounded-lg"
+          onClick={() => onRouteChange('home')}
+          className="flex items-center"
         >
           <img 
             alt="Lutix" 
-            className="h-10 md:h-12 w-auto object-contain" 
+            className="h-10 w-auto object-contain dark:invert transition-all" 
             src="/logo-horizontal.png"
           />
         </button>
@@ -33,22 +36,38 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
             <button
               key={link.route}
               onClick={() => onRouteChange(link.route)}
-              className={`text-sm font-semibold tracking-wider hover:text-gray-300 transition-colors ${currentRoute === link.route ? 'text-white border-b-2 border-white pb-1' : 'text-gray-400'}`}
+              className={`text-sm font-semibold tracking-wide hover:text-[#3525cd] transition-colors ${currentRoute === link.route ? 'text-[#3525cd]' : 'text-slate-600 dark:text-slate-300'}`}
             >
               {link.label}
             </button>
           ))}
-          <button className="flex items-center gap-2 ml-4 text-sm font-semibold tracking-wider hover:text-gray-300 transition-colors">
-            <div className="w-6 h-6 rounded-full bg-white text-black flex items-center justify-center">
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-            </div>
-            Log In
+          
+          <button 
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            className="ml-2 p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
+          >
+            {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+          </button>
+
+          <button 
+            onClick={() => onRouteChange('demo')}
+            className="ml-4 px-6 py-2.5 bg-[#3525cd] text-white rounded-lg text-sm font-semibold hover:bg-[#2b1da8] transition-colors shadow-sm"
+          >
+            Book Demo
           </button>
         </nav>
 
-        <button className="md:hidden p-2 text-white">
-          <Menu className="w-6 h-6" />
-        </button>
+        <div className="md:hidden flex items-center gap-4">
+          <button 
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+            className="p-2 text-slate-600 dark:text-slate-300"
+          >
+            {theme === 'light' ? <Moon className="w-5 h-5" /> : <Sun className="w-5 h-5" />}
+          </button>
+          <button className="p-2 text-slate-900 dark:text-white">
+            <Menu className="w-6 h-6" />
+          </button>
+        </div>
       </div>
     </header>
   );
