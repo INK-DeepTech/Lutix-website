@@ -351,11 +351,11 @@ export const OverviewPage: React.FC<OverviewPageProps> = ({ onRouteChange }) => 
       <section className="bg-[#f2f3ff] py-20 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-[#131b2e] mb-3">
-              Engineered for Maximum Scale
+            <h2 className="text-3xl sm:text-4xl text-[#131b2e] font-bold tracking-tight">
+              A Platform Built for Scale
             </h2>
-            <p className="text-sm sm:text-base text-[#464555]">
-              Discover the core capabilities that make Lutix and NexusScale the choice for top institutions and Fortune 500 enterprises.
+            <p className="text-base text-[#464555]">
+              Discover the core capabilities that make Lutix and NexusScale the choice for modern institutions.
             </p>
           </div>
 

@@ -583,7 +583,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
                 Done
               </button>
               <button
-                onClick={() => { setIsSubmitted(false); onRouteChange('dashboard'); }}
+                onClick={() => { setIsSubmitted(false); onRouteChange('overview'); }}
                 className="px-6 py-3 rounded-xl bg-[#e2e7ff] text-[#131b2e] font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
               >
                 Inspect Live Dashboard

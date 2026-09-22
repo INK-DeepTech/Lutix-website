@@ -18,21 +18,16 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-[#e2dfff]/40 via-transparent to-[#e2e7ff]/30 pointer-events-none" />
         
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
-          <div className="lg:col-span-7 flex flex-col gap-6">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#e2e7ff] text-[#464555] font-medium text-xs w-fit">
-              <span className="material-symbols-outlined text-[16px] text-[#3525cd]">verified</span>
-              <span className="font-semibold text-[#3525cd]">Software Built for Complex Organizations</span>
-            </div>
-
+          <div className="lg:col-span-12 flex flex-col gap-6 text-center lg:text-left max-w-4xl mx-auto lg:mx-0">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl text-[#131b2e] tracking-tight font-semibold leading-[1.15]">
               Building smart, reliable software for modern institutions.
             </h1>
 
-            <p className="text-base sm:text-lg text-[#464555] max-w-2xl leading-relaxed">
-              Lutix builds custom software designed specifically for large organizations. We help you move from slow, outdated systems to fast, modern platforms — without losing what works.
+            <p className="text-base sm:text-lg text-[#464555] max-w-2xl leading-relaxed mx-auto lg:mx-0">
+              We help you move from slow, outdated systems to fast, modern platforms — without losing what works.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4 pt-2">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <a 
                 href="#philosophy" 
                 className="bg-[#3525cd] text-white px-6 py-3.5 rounded-xl font-medium text-sm hover:bg-[#4d44e3] transition-all shadow-sm flex items-center gap-2 group"
@@ -54,48 +49,6 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
               >
                 academicOS Solutions →
               </button>
-            </div>
-          </div>
-
-          <div className="lg:col-span-5">
-            <div className="bg-white rounded-2xl p-6 shadow-xl border border-[#dae2fd] relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#3525cd]/10 rounded-full blur-2xl pointer-events-none" />
-              
-              <div className="flex flex-col gap-4">
-                <div className="flex items-center justify-between pb-4 border-b border-[#eaedff]">
-                  <div className="flex items-center gap-2">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#006a61] animate-pulse" aria-hidden="true" />
-                    <span className="font-semibold text-sm text-[#131b2e]">Lutix Core Index</span>
-                  </div>
-                  <span className="text-xs font-semibold text-[#3525cd] bg-[#e2dfff] px-2.5 py-1 rounded-md">
-                    Live Metrics
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4 py-1">
-                  <div className="flex flex-col bg-[#f2f3ff] p-4 rounded-xl border border-[#e2e7ff]">
-                    <span className="text-xs text-[#464555] uppercase tracking-wider">Global Uptime</span>
-                    <span className="text-2xl font-bold text-[#131b2e] mt-1">99.99%</span>
-                    <span className="text-[11px] text-[#006f66] mt-0.5">SLA Guaranteed</span>
-                  </div>
-                  <div className="flex flex-col bg-[#f2f3ff] p-4 rounded-xl border border-[#e2e7ff]">
-                    <span className="text-xs text-[#464555] uppercase tracking-wider">Institutions</span>
-                    <span className="text-2xl font-bold text-[#131b2e] mt-1">250+</span>
-                    <span className="text-[11px] text-[#006f66] mt-0.5">Global Campuses</span>
-                  </div>
-                </div>
-
-                <div 
-                  className="w-full h-40 bg-cover bg-center rounded-xl relative shadow-inner overflow-hidden border border-[#dae2fd]"
-                  style={{ backgroundImage: `url('${IMAGES.office}')` }}
-                  role="img"
-                  aria-label="Lutix Corporate Center"
-                >
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#131b2e]/60 via-transparent to-transparent flex items-end p-3">
-                    <span className="text-xs text-white font-medium">Enterprise Engineering Studio</span>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -334,7 +287,7 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
       {/* Global Scale & Customer-Centric Philosophy */}
       <section className="bg-[#f2f3ff] py-16 md:py-24 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-6 flex flex-col gap-6">
+          <div className="lg:col-span-12 flex flex-col gap-6 max-w-3xl">
             <span className="text-xs font-bold text-[#3525cd] uppercase tracking-wider">
               Global Scale
             </span>
@@ -359,22 +312,6 @@ export const CompanyPage: React.FC<CompanyPageProps> = ({ onRouteChange }) => {
             <div className="flex items-center gap-3 pt-2 text-xs text-[#464555]">
               <CheckCircle2 className="w-4 h-4 text-[#006a61]" aria-hidden="true" />
               <span>Fast, local servers across North America, Europe, and Asia-Pacific — so your team always gets a snappy experience.</span>
-            </div>
-          </div>
-
-          <div className="lg:col-span-6">
-            <div 
-              className="w-full h-80 sm:h-96 bg-cover bg-center rounded-2xl shadow-lg border border-[#dae2fd] overflow-hidden relative"
-              style={{ backgroundImage: `url('${IMAGES.globalOperations}')` }}
-              role="img"
-              aria-label="Global Operations Center"
-            >
-              <div className="absolute inset-0 bg-gradient-to-t from-[#131b2e]/80 via-transparent to-transparent flex items-end p-6">
-                <div className="text-white">
-                  <span className="text-xs font-semibold uppercase tracking-wider text-[#86f2e4]">Operations Command</span>
-                  <div className="text-lg font-bold">24/7 Unified Global Reliability Center</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

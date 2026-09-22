@@ -60,12 +60,6 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
               </button>
             </li>
             <li>
-              <button onClick={() => onRouteChange('dashboard')} className="hover:text-[#3525cd] transition-colors text-left flex items-center gap-1">
-                <span>Live Dashboard</span>
-                <span className="text-[10px] px-1 py-0.5 rounded bg-[#89f5e7] text-[#00201d] font-bold">LIVE</span>
-              </button>
-            </li>
-            <li>
               <button onClick={() => onRouteChange('pricing-calculator')} className="hover:text-[#3525cd] transition-colors text-left">
                 Pricing Calculator
               </button>

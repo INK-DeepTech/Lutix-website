@@ -17,7 +17,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
   const navLinks: { route: PageRoute; label: string; badge?: string }[] = [
     { route: 'company', label: 'Company' },
     { route: 'overview', label: 'Overview' },
-    { route: 'dashboard', label: 'Dashboard', badge: 'Live' },
     { route: 'solutions-matrix', label: 'academicOS Solutions' },
     { route: 'pricing-calculator', label: 'Pricing & Calculator' },
     { route: 'demo-request', label: 'Demo / Request' },
@@ -143,14 +142,6 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange }) =
                   <div className="text-xs text-[#464555] truncate">user@lutix.dev</div>
                 </div>
                 <div className="space-y-1">
-                  <button 
-                    onClick={() => { setShowProfileMenu(false); onRouteChange('dashboard'); }}
-                    className="w-full text-left px-2.5 py-1.5 rounded-md text-xs hover:bg-[#f2f3ff] text-[#131b2e] flex items-center justify-between"
-                    role="menuitem"
-                  >
-                    <span>Live Dashboard</span>
-                    <span className="text-[10px] bg-[#89f5e7] text-[#00201d] px-1.5 py-0.5 rounded font-bold">ACTIVE</span>
-                  </button>
                   <button 
                     onClick={() => { setShowProfileMenu(false); onRouteChange('solutions-matrix'); }}
                     className="w-full text-left px-2.5 py-1.5 rounded-md text-xs hover:bg-[#f2f3ff] text-[#131b2e]"

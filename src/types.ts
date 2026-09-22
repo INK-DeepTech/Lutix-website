@@ -4,7 +4,7 @@ export type PageRoute =
   | 'solutions-matrix'
   | 'pricing-calculator'
   | 'demo-request'
-  | 'dashboard';
+ ;
 
 export type Department = 'all' | 'engineering' | 'revenue' | 'security' | 'product';
 

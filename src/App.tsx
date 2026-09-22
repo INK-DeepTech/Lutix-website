@@ -12,12 +12,11 @@ import { OverviewPage } from './components/OverviewPage';
 import { SolutionsMatrixPage } from './components/SolutionsMatrixPage';
 import { PricingCalculatorPage } from './components/PricingCalculatorPage';
 import { DemoRequestPage } from './components/DemoRequestPage';
-import { DashboardPage } from './components/DashboardPage';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<PageRoute>(() => {
     const hash = window.location.hash.replace('#', '') as PageRoute;
-    if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request', 'dashboard'].includes(hash)) {
+    if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request'].includes(hash)) {
       return hash;
     }
     return 'company';
@@ -32,7 +31,7 @@ export default function App() {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '') as PageRoute;
-      if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request', 'dashboard'].includes(hash)) {
+      if (['company', 'overview', 'solutions-matrix', 'pricing-calculator', 'demo-request'].includes(hash)) {
         setCurrentRoute(hash);
       }
     };
@@ -41,13 +40,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
-    const titles: Record<PageRoute, string> = {
+    const titles: Partial<Record<PageRoute, string>> = {
       'company': 'Lutix — About Us',
       'overview': 'Lutix — Platform Overview',
       'solutions-matrix': 'Lutix — Solutions & Capabilities',
       'pricing-calculator': 'Lutix — Pricing & Plans',
       'demo-request': 'Lutix — Book a Demo',
-      'dashboard': 'Lutix — Live Dashboard',
     };
     document.title = titles[currentRoute] || 'Lutix — Enterprise Software';
   }, [currentRoute]);
@@ -68,7 +66,6 @@ export default function App() {
         {currentRoute === 'solutions-matrix' && <SolutionsMatrixPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'pricing-calculator' && <PricingCalculatorPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'demo-request' && <DemoRequestPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'dashboard' && <DashboardPage onRouteChange={handleRouteChange} />}
       </main>
 
       <Footer onRouteChange={handleRouteChange} />
