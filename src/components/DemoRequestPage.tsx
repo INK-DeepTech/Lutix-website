@@ -37,7 +37,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
     setFormErrors(errors);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const errors: { email?: string; name?: string; org?: string } = {};
 
@@ -51,6 +51,29 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
     }
 
     setFormErrors({});
+
+    // NOTE: SMS forwarding to 7397767430 will require connecting this form submission 
+    // to a Twilio API route or a Zapier webhook in the production backend.
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY_HERE', // Target: lutixdeeptech@gmail.com
+          name: formData.fullName,
+          email: formData.workEmail,
+          organization: formData.organization,
+          message: formData.message,
+          subject: 'New Demo Request from Lutix Website'
+        })
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
+
     setIsSubmitted(true);
   };
 
@@ -188,7 +211,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
         </div>
 
         <div className="mt-8 text-center text-xs text-[#777587]">
-          Prefer direct email? Contact us at <a href="mailto:enterprise@lutix.internal" className="text-corp-vibrant font-semibold hover:underline">enterprise@lutix.internal</a>
+          Prefer direct email? Contact us at <a href="mailto:lutixdeeptech@gmail.com" className="text-corp-vibrant font-semibold hover:underline">lutixdeeptech@gmail.com</a>
         </div>
       </section>
 
