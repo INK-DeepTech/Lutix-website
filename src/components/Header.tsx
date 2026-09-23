@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, the
 
           <button 
             onClick={() => onRouteChange('demo')}
-            className="ml-4 px-6 py-2.5 bg-corp-vibrant text-white rounded-lg text-sm font-semibold hover:bg-corp-soft transition-colors shadow-sm"
+            className="ml-4 px-6 py-2.5 bg-corp-vibrant text-white rounded-full text-sm font-semibold hover:bg-corp-soft transition-colors shadow-sm"
           >
             Book Demo
           </button>
