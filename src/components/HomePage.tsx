@@ -161,43 +161,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
         </div>
       </section>
 
-      {/* Founders / Team Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-corp-navy tracking-tight">The minds driving our innovation</h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            <div className="flex flex-col items-start group">
-              <div className="w-full aspect-square overflow-hidden rounded-[2.5rem] mb-6 bg-slate-100 relative shadow-sm">
-                <img src="/ceo.jpg" alt="Iswarya" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-corp-navy/0 group-hover:bg-corp-navy/10 transition-colors duration-500"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-corp-navy mb-1">Iswarya</h3>
-              <p className="text-base font-semibold text-slate-500">CEO & Co-Founder</p>
-            </div>
-            
-            <div className="flex flex-col items-start group">
-              <div className="w-full aspect-square overflow-hidden rounded-[2.5rem] mb-6 bg-slate-100 relative shadow-sm">
-                <img src="/coo.jpg" alt="Nithishkumar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
-                <div className="absolute inset-0 bg-corp-navy/0 group-hover:bg-corp-navy/10 transition-colors duration-500"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-corp-navy mb-1">Nithishkumar</h3>
-              <p className="text-base font-semibold text-slate-500">CTO & Co-Founder</p>
-            </div>
-
-            <div className="flex flex-col items-start group">
-              <div className="w-full aspect-square overflow-hidden rounded-[2.5rem] mb-6 bg-slate-100 relative shadow-sm">
-                <img src="/cto.jpg" alt="Karthik Balaji" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
-                <div className="absolute inset-0 bg-corp-navy/0 group-hover:bg-corp-navy/10 transition-colors duration-500"></div>
-              </div>
-              <h3 className="text-2xl font-bold text-corp-navy mb-1">Karthik Balaji</h3>
-              <p className="text-base font-semibold text-slate-500">COO</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Massive Bottom CTA (Dark UI Card) */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-[1400px] mx-auto">

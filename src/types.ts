@@ -1,4 +1,4 @@
-export type PageRoute = 'home' | 'academic-os' | 'pricing' | 'demo';
+export type PageRoute = 'home' | 'academic-os' | 'pricing' | 'demo' | 'about';
 
 export type Department = 'all' | 'engineering' | 'revenue' | 'security' | 'product';
 

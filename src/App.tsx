@@ -6,11 +6,12 @@ import { HomePage } from './components/HomePage';
 import { AcademicOSPage } from './components/AcademicOSPage';
 import { PricingCalculatorPage } from './components/PricingCalculatorPage';
 import { DemoRequestPage } from './components/DemoRequestPage';
+import { AboutPage } from './components/AboutPage';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<PageRoute>(() => {
     const hash = window.location.hash.replace('#', '') as PageRoute;
-    if (['home', 'academic-os', 'pricing', 'demo'].includes(hash)) {
+    if (['home', 'academic-os', 'pricing', 'demo', 'about'].includes(hash)) {
       return hash;
     }
     return 'home';
@@ -35,7 +36,7 @@ export default function App() {
   useEffect(() => {
     const onHashChange = () => {
       const hash = window.location.hash.replace('#', '') as PageRoute;
-      if (['home', 'academic-os', 'pricing', 'demo'].includes(hash)) {
+      if (['home', 'academic-os', 'pricing', 'demo', 'about'].includes(hash)) {
         setCurrentRoute(hash);
       }
     };
@@ -52,6 +53,7 @@ export default function App() {
         {currentRoute === 'academic-os' && <AcademicOSPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'pricing' && <PricingCalculatorPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'demo' && <DemoRequestPage onRouteChange={handleRouteChange} />}
+        {currentRoute === 'about' && <AboutPage onRouteChange={handleRouteChange} />}
       </main>
 
       <Footer onRouteChange={handleRouteChange} />
