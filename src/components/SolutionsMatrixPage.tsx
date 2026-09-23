@@ -7,7 +7,7 @@ interface SolutionsMatrixPageProps {
 
 export const SolutionsMatrixPage: React.FC<SolutionsMatrixPageProps> = ({ onRouteChange }) => {
   return (
-    <div className="flex flex-col w-full bg-brand-mint text-brand-navy min-h-screen">
+    <div className="flex flex-col w-full bg-corp-light text-corp-navy min-h-screen">
       <div id="academic-os-content"></div>
     </div>
   );

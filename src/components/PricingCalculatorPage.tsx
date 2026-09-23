@@ -55,14 +55,14 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
   }, [seats, executions, storageGb, multiRegion, billingCycle]);
 
   return (
-    <div className="flex flex-col w-full bg-brand-mint text-brand-navy">
+    <div className="flex flex-col w-full bg-corp-light text-corp-navy">
       {/* Top Banner / Header area */}
       <section className="w-full bg-[#f2f3ff] py-8 md:py-8 px-6 md:px-8 border-b border-[#e2e7ff]">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
           <span className="px-3 py-1 rounded-full bg-[#e2dfff] text-[#0f0069] text-xs font-bold uppercase tracking-wider">
             Transparent Scaling
           </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-navy tracking-tight max-w-3xl">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-corp-navy tracking-tight max-w-3xl">
             Pricing & Plans
           </h1>
           <p className="text-base sm:text-lg text-slate-600 max-w-2xl leading-relaxed">
@@ -71,7 +71,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
 
           {/* Billing Toggle */}
           <div 
-            className="flex items-center gap-3 mt-4 bg-brand-mint p-1.5 rounded-2xl border border-[#dae2fd] shadow-sm"
+            className="flex items-center gap-3 mt-4 bg-corp-light p-1.5 rounded-2xl border border-[#dae2fd] shadow-sm"
             role="radiogroup" 
             aria-label="Billing cycle"
           >
@@ -81,8 +81,8 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
               onClick={() => setBillingCycle('monthly')}
               className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                 billingCycle === 'monthly'
-                  ? 'bg-brand-teal text-white shadow-sm'
-                  : 'text-slate-600 hover:text-brand-navy'
+                  ? 'bg-corp-deep text-white shadow-sm'
+                  : 'text-slate-600 hover:text-corp-navy'
               }`}
             >
               Monthly Billing
@@ -93,8 +93,8 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
               onClick={() => setBillingCycle('annual')}
               className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-1.5 ${
                 billingCycle === 'annual'
-                  ? 'bg-brand-teal text-white shadow-sm'
-                  : 'text-slate-600 hover:text-brand-navy'
+                  ? 'bg-corp-deep text-white shadow-sm'
+                  : 'text-slate-600 hover:text-corp-navy'
               }`}
             >
               <span>Annual Billing</span>
@@ -110,15 +110,15 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
       <section className="w-full py-10 md:py-8 px-6 md:px-8 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
           {/* Card 1: Developer & Team */}
-          <div className="bg-brand-mint rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-corp-light rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-brand-navy">Growth Plan</h3>
+                <h3 className="text-xl font-bold text-corp-navy">Growth Plan</h3>
                 <p className="text-xs text-slate-600 mt-1">For small teams automating core microservices & internal workflows.</p>
               </div>
 
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-brand-navy">
+                <span className="text-4xl font-extrabold text-corp-navy">
                   ${billingCycle === 'annual' ? '39' : '49'}
                 </span>
                 <span className="text-xs text-slate-600 font-semibold">/ month</span>
@@ -151,7 +151,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
             <div className="pt-8">
               <button
                 onClick={() => onRouteChange('demo')}
-                className="w-full py-3 rounded-xl bg-[#e2e7ff] text-brand-navy font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
+                className="w-full py-3 rounded-xl bg-[#e2e7ff] text-corp-navy font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
               >
                 Deploy Growth Plan
               </button>
@@ -159,20 +159,20 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
           </div>
 
           {/* Card 2: Business Growth (Popular) */}
-          <div className="bg-brand-mint rounded-3xl p-8 border-2 border-[#3525cd] shadow-xl relative flex flex-col justify-between">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-brand-teal text-white text-[11px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
+          <div className="bg-corp-light rounded-3xl p-8 border-2 border-[#3525cd] shadow-xl relative flex flex-col justify-between">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-corp-deep text-white text-[11px] font-bold uppercase tracking-wider shadow-sm flex items-center gap-1">
               <Sparkles className="w-3 h-3" />
               <span>Most Popular</span>
             </div>
 
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-brand-navy">Business Plan</h3>
+                <h3 className="text-xl font-bold text-corp-navy">Business Plan</h3>
                 <p className="text-xs text-slate-600 mt-1">For scaling organizations requiring advanced state management & VPC peering.</p>
               </div>
 
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-brand-teal">
+                <span className="text-4xl font-extrabold text-corp-vibrant">
                   ${billingCycle === 'annual' ? '159' : '199'}
                 </span>
                 <span className="text-xs text-slate-600 font-semibold">/ month</span>
@@ -180,27 +180,27 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
 
               <ul className="space-y-3 text-xs sm:text-sm text-slate-600 pt-2">
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
-                  <span className="font-semibold text-brand-navy">Up to 50 team seats included</span>
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
+                  <span className="font-semibold text-corp-navy">Up to 50 team seats included</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
                   <span>500,000 workflow executions / mo</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
                   <span>Priority support (4h response SLA)</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
                   <span>Dedicated private servers</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
                   <span>Advanced security firewall</span>
                 </li>
                 <li className="flex items-center gap-2.5">
-                  <Check className="w-4 h-4 text-brand-teal shrink-0" />
+                  <Check className="w-4 h-4 text-corp-vibrant shrink-0" />
                   <span>99.99% uptime guarantee</span>
                 </li>
               </ul>
@@ -209,7 +209,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
             <div className="pt-8">
               <button
                 onClick={() => onRouteChange('demo')}
-                className="w-full py-3.5 rounded-xl bg-brand-teal text-white font-semibold text-xs sm:text-sm hover:bg-brand-cyan transition-all shadow-md flex items-center justify-center gap-2"
+                className="w-full py-3.5 rounded-xl bg-corp-deep text-white font-semibold text-xs sm:text-sm hover:bg-corp-vibrant transition-all shadow-md flex items-center justify-center gap-2"
               >
                 <span>Start 14-Day Free Trial</span>
                 <ArrowRight className="w-4 h-4" />
@@ -218,15 +218,15 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
           </div>
 
           {/* Card 3: Enterprise Core */}
-          <div className="bg-brand-mint rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+          <div className="bg-corp-light rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
             <div className="space-y-6">
               <div>
-                <h3 className="text-xl font-bold text-brand-navy">Enterprise Plan</h3>
+                <h3 className="text-xl font-bold text-corp-navy">Enterprise Plan</h3>
                 <p className="text-xs text-slate-600 mt-1">Mission-critical deployments requiring dedicated infrastructure & air-gapped options.</p>
               </div>
 
               <div className="flex items-baseline gap-1">
-                <span className="text-4xl font-extrabold text-brand-navy">Custom</span>
+                <span className="text-4xl font-extrabold text-corp-navy">Custom</span>
                 <span className="text-xs text-slate-600 font-semibold">/ agreement</span>
               </div>
 
@@ -261,7 +261,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
             <div className="pt-8">
               <button
                 onClick={() => onRouteChange('demo')}
-                className="w-full py-3 rounded-xl bg-[#e2e7ff] text-brand-navy font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
+                className="w-full py-3 rounded-xl bg-[#e2e7ff] text-corp-navy font-semibold text-xs sm:text-sm hover:bg-[#dae2fd] transition-all"
               >
                 Contact Architecture Team
               </button>
