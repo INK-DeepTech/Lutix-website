@@ -53,7 +53,7 @@ export default function App() {
         {currentRoute === 'academic-os' && <AcademicOSPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'pricing' && <PricingCalculatorPage onRouteChange={handleRouteChange} />}
         {currentRoute === 'demo' && <DemoRequestPage onRouteChange={handleRouteChange} />}
-        {currentRoute === 'about' && <AboutPage onRouteChange={handleRouteChange} />}
+        {currentRoute === 'about' && <AboutPage />}
       </main>
 
       <Footer onRouteChange={handleRouteChange} />

@@ -10,64 +10,35 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
   return (
     <div className="w-full bg-white transition-colors duration-300 font-sans">
       
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-32 px-6 md:px-12 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#eef4fc] to-[#f8fafc]">
-        {/* Background Pattern (+) */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <Plus className="absolute top-20 left-[10%] text-slate-200 w-6 h-6" />
-          <Plus className="absolute top-40 right-[20%] text-slate-200 w-8 h-8" />
-          <Plus className="absolute bottom-40 left-[20%] text-slate-200 w-5 h-5" />
-          <Plus className="absolute top-60 left-[80%] text-slate-200 w-6 h-6" />
-          <Plus className="absolute bottom-20 right-[15%] text-slate-200 w-8 h-8" />
-        </div>
+            <div className="relative bg-gradient-to-b from-[#E8F2F8] to-[#FFFFFF] min-h-[80vh] pt-32 pb-20 px-6 overflow-hidden flex items-center justify-center">
+  {/* Braid Background Plus Pattern */}
+  <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'radial-gradient(#749DC8 1.5px, transparent 1.5px)', backgroundSize: '48px 48px' }}></div>
+  
+  <div className="relative z-10 w-full max-w-[1400px] mx-auto text-center flex flex-col items-center">
+    
+    {/* Automate Your Needs Badge */}
+    <div className="inline-flex items-center gap-3 bg-[#D9EAF5] px-6 py-2.5 rounded-full mb-12 shadow-sm border border-white/60">
+       {/* Note: Ensure 'bird-icon.png' is the transparent bird-only file in the public folder */}
+       <img src="/standalone-bird.png" alt="Lutix Bird" className="h-7 w-7 object-contain mix-blend-multiply" />
+       <span className="text-[#0A61C9] font-bold tracking-wide text-sm md:text-base uppercase">Automate Your Needs</span>
+    </div>
 
-        <div className="max-w-[1400px] w-full mx-auto flex flex-col items-center text-center gap-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-5 py-2 bg-white border border-slate-200 text-corp-navy shadow-sm rounded-full text-sm font-bold">
-            <img src="/standalone-bird.png" alt="Lutix Icon" className="h-5 w-5 object-contain mix-blend-multiply bg-transparent" />
-            <span>Automate Your Needs</span>
-          </div>
+    {/* Massive Braid Typography */}
+    <h1 className="text-6xl md:text-[8rem] leading-[1.1] font-extrabold text-[#07326A] tracking-tighter mb-8 font-serif w-full">
+      Lutix DeepTech
+    </h1>
+    
+    {/* Subtitle */}
+    <p className="text-xl md:text-3xl text-[#567C8D] max-w-4xl mx-auto mb-14 font-medium leading-relaxed">
+      Imagine, Innovate, and Impact. An intelligent technology solutions company.
+    </p>
 
-          <h1 className="font-serif-brand text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tight text-corp-navy leading-[1.1] max-w-5xl w-full">
-            Lutix DeepTech
-          </h1>
-
-          <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed">
-            Imagine, Innovate, and Impact. An intelligent technology solutions company.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
-            <button 
-              onClick={() => onRouteChange('demo')}
-              className="px-8 py-4 bg-corp-navy text-white rounded-full text-base font-bold hover:bg-corp-vibrant transition-all shadow-lg flex items-center gap-2"
-            >
-              <span>Get Started</span>
-              <ArrowRight className="w-5 h-5" />
-            </button>
-          </div>
-
-          {/* Floating UI Mockup */}
-          <div className="mx-auto mt-20 w-full max-w-3xl bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 transform hover:-translate-y-2 transition-transform duration-500 cursor-pointer group">
-            <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
-              <FileText className="w-8 h-8 text-corp-vibrant" />
-            </div>
-            <div className="flex-1 space-y-3 w-full text-left">
-              <div className="flex justify-between items-center">
-                <span className="font-bold text-corp-navy text-lg">Shareholder Agreement.pdf</span>
-                <span className="text-xs font-bold text-slate-400 bg-slate-100 px-3 py-1 rounded-full">Secure</span>
-              </div>
-              <div className="h-2.5 bg-slate-100 rounded-full w-full overflow-hidden">
-                 <div className="h-full bg-corp-vibrant w-3/4 rounded-full relative">
-                    <div className="absolute inset-0 bg-white/20 w-full animate-[pulse_2s_ease-in-out_infinite]"></div>
-                 </div>
-              </div>
-              <p className="text-sm text-slate-500">Scanning document for critical clauses...</p>
-            </div>
-            <button className="w-full md:w-auto px-6 py-3 bg-corp-vibrant text-white rounded-full text-sm font-bold flex items-center justify-center gap-2 shadow-md hover:bg-corp-navy transition-colors">
-              <Sparkles className="w-4 h-4"/> Review with AI
-            </button>
-          </div>
-        </div>
-      </section>
+    {/* Braid Pill Button */}
+    <button onClick={() => onRouteChange('demo')} className="bg-[#0A61C9] text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-xl shadow-blue-500/20 hover:bg-[#064089] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3">
+      Get Started <span className="text-2xl font-light">&#8594;</span>
+    </button>
+  </div>
+</div>
 
       {/* Trusted By & Stats Section */}
       <section className="py-24 bg-white border-y border-slate-100">
