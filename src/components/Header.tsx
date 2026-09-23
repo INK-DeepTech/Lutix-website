@@ -18,7 +18,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, the
   ];
 
   return (
-    <header className="w-full bg-brand-mint dark:bg-slate-900 text-brand-navy dark:text-white sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
+    <header className="w-full bg-gradient-to-r from-cyan-100 to-blue-100 dark:bg-slate-900 text-brand-navy dark:text-white sticky top-0 z-50 border-b border-slate-100 dark:border-slate-800 transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <button 
           onClick={() => onRouteChange('home')}
@@ -26,7 +26,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, the
         >
           <img 
             alt="Lutix" 
-            className="h-16 md:h-24 lg:h-28 w-auto object-contain dark:invert transition-all" 
+            className="h-16 md:h-24 lg:h-28 w-auto object-contain mix-blend-multiply dark:invert transition-all" 
             src="/logo-horizontal.png"
           />
         </button>
