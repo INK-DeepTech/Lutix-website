@@ -179,7 +179,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
             
             <div className="flex flex-col items-start group">
               <div className="w-full aspect-square overflow-hidden rounded-[2.5rem] mb-6 bg-slate-100 relative shadow-sm">
-                <img src="/cto.jpg" alt="Nithishkumar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
+                <img src="/coo.jpg" alt="Nithishkumar" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
                 <div className="absolute inset-0 bg-corp-navy/0 group-hover:bg-corp-navy/10 transition-colors duration-500"></div>
               </div>
               <h3 className="text-2xl font-bold text-corp-navy mb-1">Nithishkumar</h3>
@@ -188,7 +188,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
 
             <div className="flex flex-col items-start group">
               <div className="w-full aspect-square overflow-hidden rounded-[2.5rem] mb-6 bg-slate-100 relative shadow-sm">
-                <img src="/coo.jpg" alt="Karthik Balaji" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
+                <img src="/cto.jpg" alt="Karthik Balaji" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 object-top" />
                 <div className="absolute inset-0 bg-corp-navy/0 group-hover:bg-corp-navy/10 transition-colors duration-500"></div>
               </div>
               <h3 className="text-2xl font-bold text-corp-navy mb-1">Karthik Balaji</h3>
