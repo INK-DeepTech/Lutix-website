@@ -58,7 +58,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
     <div className="flex flex-col w-full bg-corp-light text-corp-navy">
       {/* Top Banner / Header area */}
       <section className="w-full bg-[#f2f3ff] py-8 md:py-8 px-6 md:px-8 border-b border-[#e2e7ff]">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-4">
+        <div className="max-w-[1400px] w-full mx-auto flex flex-col items-center text-center gap-4">
           <span className="px-3 py-1 rounded-full bg-[#e2dfff] text-[#0f0069] text-xs font-bold uppercase tracking-wider">
             Transparent Scaling
           </span>
@@ -107,7 +107,7 @@ export const PricingCalculatorPage: React.FC<PricingCalculatorPageProps> = ({ on
       </section>
 
       {/* Tier Cards Grid */}
-      <section className="w-full py-10 md:py-8 px-6 md:px-8 max-w-7xl mx-auto">
+      <section className="w-full py-10 md:py-8 px-6 md:px-8 max-w-[1400px] w-full mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
           {/* Card 1: Developer & Team */}
           <div className="bg-corp-light rounded-3xl p-8 border border-[#dae2fd] shadow-sm hover:shadow-md transition-all flex flex-col justify-between">

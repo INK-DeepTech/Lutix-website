@@ -9,8 +9,8 @@ interface AcademicOSPageProps {
 export const AcademicOSPage: React.FC<AcademicOSPageProps> = ({ onRouteChange }) => {
   return (
     <div className="w-full bg-corp-light dark:bg-slate-900 min-h-screen pt-20 transition-colors duration-300">
-      <section className="px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
+      <section className="px-6 md:px-12">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="bg-corp-deep rounded-3xl p-10 md:p-16 text-white relative overflow-hidden shadow-xl">
             <div className="absolute top-0 right-0 p-8 opacity-10 pointer-events-none">
               <img src="/logo-stacked.png" alt="" className="w-96 h-96 object-contain invert" />

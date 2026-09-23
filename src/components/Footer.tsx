@@ -8,9 +8,9 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
   return (
     <footer className="bg-corp-deep text-white py-16 transition-colors duration-300">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="col-span-1 md:col-span-1 space-y-6">
-          <img alt="Lutix" className="h-16 md:h-20 w-auto object-contain brightness-0 invert" src="/logo-horizontal.png" />
+          <img alt="Lutix" className="h-16 md:h-20 w-auto object-contain invert mix-blend-screen" src="/logo-horizontal.png" />
           <p className="text-corp-accent-sky text-sm max-w-sm leading-relaxed">
             Carefully crafted software that never lets you down. Build your organization's future with our intelligent workflows and resilient infrastructure.
           </p>

@@ -11,19 +11,19 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
     <div className="w-full bg-corp-light dark:bg-slate-900 transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 px-4 sm:px-6 lg:px-8 border-b border-slate-100 dark:border-slate-800 bg-corp-light dark:bg-slate-900/50">
-        <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-corp-deep/10 text-corp-vibrant dark:text-[#8b80f9] rounded-full text-sm font-semibold">
-            <img src="/bird-icon.png" alt="Lutix Icon" className="w-4 h-4 object-contain" />
-            <span>automate your needs</span>
+      <section className="relative overflow-hidden pt-20 pb-32 px-6 md:px-12 border-b border-slate-100 dark:border-slate-800 bg-corp-light dark:bg-slate-900/50">
+        <div className="max-w-[1400px] w-full mx-auto flex flex-col items-center text-center gap-8 relative z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-corp-deep/10 text-corp-vibrant dark:text-[#8b80f9] rounded-full text-base md:text-lg font-bold">
+            <img src="/standalone-bird.png" alt="Lutix Icon" className="h-6 w-6 object-contain mix-blend-multiply bg-transparent" />
+            <span>Automate Your Needs</span>
           </div>
 
-          <h1 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-corp-navy dark:text-white tracking-tight leading-tight max-w-4xl">
-            Braid – AI SaaS Business Automation Platform
+          <h1 className="font-serif-brand text-6xl md:text-8xl lg:text-[7rem] font-extrabold tracking-tight text-corp-navy dark:text-white tracking-tight leading-tight max-w-[1400px] w-full">
+            Lutix DeepTech
           </h1>
 
-          <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl leading-relaxed">
-            To build a smarter, sustainable and future through technology and innovation.
+          <p className="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
+            Imagine, Innovate, and Impact. An intelligent technology solutions company.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -39,7 +39,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Services We Offer */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <section className="py-24 px-6 md:px-12 max-w-[1400px] w-full mx-auto">
         <div className="text-center space-y-4 mb-16">
           <h2 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-corp-navy dark:text-white">
             Services We Offer
@@ -110,8 +110,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Why Us Section */}
-      <section className="py-12 md:pb-16 h-auto px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-corp-light to-corp-accent-sky dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border-y border-slate-100 dark:border-slate-800">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
+      <section className="py-12 md:pb-16 h-auto px-6 md:px-12 bg-gradient-to-r from-corp-light to-corp-accent-sky dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <div className="max-w-[1400px] w-full mx-auto text-center space-y-10">
           <h2 className="font-serif-brand text-5xl md:text-7xl font-bold text-corp-navy dark:text-white tracking-tighter">
             Why Us?
           </h2>
@@ -122,8 +122,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Core Capabilities */}
-      <section className="bg-corp-light dark:bg-slate-900/50 py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-100 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto">
+      <section className="bg-corp-light dark:bg-slate-900/50 py-24 px-6 md:px-12 border-y border-slate-100 dark:border-slate-800">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-corp-navy dark:text-white">
               A Platform Built for Scale
@@ -163,8 +163,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-6 md:px-12 bg-white dark:bg-slate-900 border-y border-slate-100 dark:border-slate-800">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-corp-navy dark:text-white">Our Mission</h2>
           </div>
@@ -190,8 +190,8 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Core Values Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-corp-light dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-6 md:px-12 bg-corp-light dark:bg-slate-900/50 border-b border-slate-100 dark:border-slate-800">
+        <div className="max-w-[1400px] w-full mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-corp-navy dark:text-white">Core Values</h2>
           </div>
