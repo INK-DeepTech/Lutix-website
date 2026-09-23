@@ -11,7 +11,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
     <div className="w-full bg-white transition-colors duration-300 font-sans">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 pb-32 px-6 md:px-12 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-50 via-white to-white">
+      <section className="relative overflow-hidden pt-24 pb-32 px-6 md:px-12 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#eef4fc] to-[#f8fafc]">
         {/* Background Pattern (+) */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <Plus className="absolute top-20 left-[10%] text-slate-200 w-6 h-6" />
@@ -92,22 +92,22 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
               <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center text-corp-vibrant mb-6">
                 <CheckCircle2 className="w-6 h-6" />
               </div>
-              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">1.5K+</h3>
-              <p className="text-xs font-bold tracking-widest text-slate-500 uppercase">Tasks Automated</p>
+              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">10x</h3>
+              <p className="text-xs font-bold tracking-widest text-slate-500 uppercase">Faster Deployments</p>
             </div>
             <div className="bg-slate-50 rounded-3xl p-10 flex flex-col items-center text-center shadow-sm border border-slate-100">
               <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center text-corp-vibrant mb-6">
                 <Activity className="w-6 h-6" />
               </div>
-              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">30K</h3>
+              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">99.9%</h3>
               <p className="text-xs font-bold tracking-widest text-slate-500 uppercase">Platform Uptime</p>
             </div>
             <div className="bg-slate-50 rounded-3xl p-10 flex flex-col items-center text-center shadow-sm border border-slate-100">
               <div className="w-12 h-12 bg-white rounded-full shadow-sm border border-slate-100 flex items-center justify-center text-corp-vibrant mb-6">
                 <Sparkles className="w-6 h-6" />
               </div>
-              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">89%</h3>
-              <p className="text-xs font-bold tracking-widest text-slate-500 uppercase">AI Assistance</p>
+              <h3 className="text-5xl md:text-6xl font-black text-corp-navy tracking-tight mb-2">2.5K+</h3>
+              <p className="text-xs font-bold tracking-widest text-slate-500 uppercase">Users Supported</p>
             </div>
           </div>
         </div>
@@ -161,67 +161,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
         </div>
       </section>
 
-      {/* Massive Bottom CTA (Dark UI Card) */}
-      <section className="py-24 px-6 md:px-12 bg-white">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="bg-[#064089] rounded-[3rem] overflow-hidden flex flex-col lg:flex-row items-center justify-between p-12 md:p-20 lg:p-24 shadow-2xl relative">
-            <div className="lg:w-1/2 relative z-10 text-center lg:text-left mb-16 lg:mb-0">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-[1.1] mb-10 max-w-xl mx-auto lg:mx-0">
-                Transform the way you work with intelligent technology.
-              </h2>
-              <button 
-                onClick={() => onRouteChange('demo')}
-                className="inline-flex items-center gap-2 bg-white text-[#064089] hover:bg-slate-100 px-8 py-4 rounded-full text-lg font-bold shadow-xl hover:-translate-y-1 transition-transform"
-              >
-                <span>Book Your Free Demo</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-            </div>
-            
-            {/* Dashboard Mockup on Right */}
-            <div className="lg:w-1/2 relative z-10 w-full flex justify-end">
-              <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-6 shadow-2xl transform lg:rotate-2 hover:rotate-0 transition-transform duration-500 w-full max-w-md">
-                <div className="flex justify-between items-center mb-8 border-b border-white/10 pb-4">
-                  <div className="flex gap-2">
-                    <div className="w-3 h-3 rounded-full bg-red-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-amber-400"></div>
-                    <div className="w-3 h-3 rounded-full bg-green-400"></div>
-                  </div>
-                  <div className="text-white/60 text-sm font-semibold">Dashboard</div>
-                </div>
-                
-                <div className="space-y-6">
-                  {/* Chart Bars */}
-                  <div className="flex items-end gap-3 h-40">
-                    <div className="w-1/6 bg-white/20 rounded-t-lg h-[40%] hover:bg-white/40 transition-colors cursor-pointer"></div>
-                    <div className="w-1/6 bg-white/20 rounded-t-lg h-[60%] hover:bg-white/40 transition-colors cursor-pointer"></div>
-                    <div className="w-1/6 bg-corp-vibrant rounded-t-lg h-[90%] shadow-[0_0_20px_rgba(10,97,201,0.5)] cursor-pointer"></div>
-                    <div className="w-1/6 bg-white/20 rounded-t-lg h-[50%] hover:bg-white/40 transition-colors cursor-pointer"></div>
-                    <div className="w-1/6 bg-white/20 rounded-t-lg h-[75%] hover:bg-white/40 transition-colors cursor-pointer"></div>
-                    <div className="w-1/6 bg-white/20 rounded-t-lg h-[30%] hover:bg-white/40 transition-colors cursor-pointer"></div>
-                  </div>
-                  {/* Mock Data Rows */}
-                  <div className="space-y-3">
-                    <div className="w-full h-10 bg-white/5 rounded-xl flex items-center px-4 gap-4">
-                      <div className="w-6 h-6 rounded-full bg-white/20"></div>
-                      <div className="h-2 w-24 bg-white/20 rounded-full"></div>
-                      <div className="h-2 w-12 bg-white/40 rounded-full ml-auto"></div>
-                    </div>
-                    <div className="w-full h-10 bg-white/5 rounded-xl flex items-center px-4 gap-4">
-                      <div className="w-6 h-6 rounded-full bg-white/20"></div>
-                      <div className="h-2 w-32 bg-white/20 rounded-full"></div>
-                      <div className="h-2 w-16 bg-white/40 rounded-full ml-auto"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Background Glow */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-400/20 rounded-full blur-[100px] pointer-events-none"></div>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
   );
 };

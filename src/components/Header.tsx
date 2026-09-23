@@ -13,7 +13,7 @@ export const Header: React.FC<HeaderProps> = ({ currentRoute, onRouteChange, the
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   return (
-    <header className="w-full bg-white text-corp-navy sticky top-0 z-50 border-b border-slate-200 transition-colors duration-300">
+    <header className="w-full bg-white/80 backdrop-blur-md text-corp-navy sticky top-0 z-50 border-b border-slate-200 transition-colors duration-300">
       <div className="max-w-[1400px] w-full mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
         <button 
           onClick={() => onRouteChange('home')}
