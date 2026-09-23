@@ -20,7 +20,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
     <div className="inline-flex items-center gap-3 bg-[#D9EAF5] px-6 py-2.5 rounded-full mb-12 shadow-sm border border-white/60">
        {/* Note: Ensure 'bird-icon.png' is the transparent bird-only file in the public folder */}
        <img src="/standalone-bird.png" alt="Lutix Bird" className="h-7 w-7 object-contain mix-blend-multiply" />
-       <span className="text-[#0A61C9] font-bold tracking-wide text-sm md:text-base uppercase">Automate Your Needs</span>
+       <span className="text-[#0A61C9] font-bold tracking-wide text-lg md:text-xl font-extrabold uppercase">Automate Your Needs</span>
     </div>
 
     {/* Massive Braid Typography */}
@@ -37,28 +37,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
     <button onClick={() => onRouteChange('demo')} className="bg-[#0A61C9] text-white px-10 py-5 rounded-full font-bold text-lg md:text-xl shadow-xl shadow-blue-500/20 hover:bg-[#064089] hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex items-center gap-3">
       Get Started <span className="text-2xl font-light">&#8594;</span>
     </button>
-    {/* Floating UI Mockup */}
-    <div className="mt-20 w-full max-w-4xl bg-white/70 backdrop-blur-xl border border-white/50 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.1)] rounded-[2rem] p-6 md:p-8 flex flex-col md:flex-row items-center gap-6 transform hover:-translate-y-2 transition-transform duration-500 cursor-pointer group">
-      <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform shadow-inner">
-        <FileText className="w-8 h-8 text-[#0A61C9]" />
-      </div>
-      <div className="flex-1 space-y-3 w-full text-left">
-        <div className="flex justify-between items-center">
-          <span className="font-bold text-[#07326A] text-lg">Shareholder Agreement.pdf</span>
-          <span className="text-xs font-bold text-[#0A61C9] bg-blue-50 px-3 py-1 rounded-full border border-blue-100 shadow-sm">Review with AI</span>
-        </div>
-        <div className="h-2.5 bg-slate-100 rounded-full w-full overflow-hidden shadow-inner">
-            <div className="h-full bg-[#0A61C9] w-3/4 rounded-full relative">
-              <div className="absolute inset-0 bg-white/20 w-full animate-[pulse_2s_ease-in-out_infinite]"></div>
-            </div>
-        </div>
-        <div className="flex justify-between text-sm font-semibold text-[#567C8D]">
-          <span>Analyzing clauses...</span>
-          <span>75%</span>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
 
       {/* Trusted By & Stats Section */}
@@ -77,7 +56,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
 
           {/* Stats Grid */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-corp-navy">Real results from real users</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-corp-navy"><img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />Real results from real users</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-slate-50 rounded-3xl p-10 flex flex-col items-center text-center shadow-sm border border-slate-100">
@@ -105,11 +84,51 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
         </div>
       </section>
 
+      
+      {/* Services Bento Box */}
+      <section className="py-32 bg-white">
+        <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+          <div className="mb-16 max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-[#07326A] mb-6">
+              <img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />
+              Intelligent Solutions for Every Scale
+            </h2>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              From modern tech startups to traditional local businesses—like a wholesale dhal trader—we bridge the gap. We turn complex operations into simple, scalable tools that actually work for you.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 auto-rows-[400px]">
+            <div className="lg:col-span-2 bg-[#F1F7F9] rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="relative z-10 w-full md:w-2/3">
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm text-[#0A61C9] mb-6"><Code className="w-7 h-7" /></div>
+                <h3 className="text-3xl font-bold text-[#07326A] mb-4">Custom Web & Software</h3>
+                <p className="text-lg text-[#567C8D] leading-relaxed">End-to-end bespoke digital platforms designed specifically for your operational requirements.</p>
+              </div>
+            </div>
+            <div className="bg-[#0A61C9] rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl transition-all duration-300">
+              <div className="relative z-10">
+                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6"><Zap className="w-7 h-7" /></div>
+                <h3 className="text-3xl font-bold text-white mb-4">Intelligent Systems</h3>
+                <p className="text-lg text-blue-100 leading-relaxed">AI and intelligent automations integrated directly into your workflow.</p>
+              </div>
+            </div>
+            <div className="lg:col-span-3 bg-slate-900 rounded-3xl p-10 relative overflow-hidden group hover:shadow-xl transition-all duration-300 flex items-end">
+              <div className="relative z-10 w-full md:w-1/2">
+                <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-white mb-6"><Truck className="w-7 h-7" /></div>
+                <h3 className="text-3xl font-bold text-white mb-4">Supply Chain Solutions</h3>
+                <p className="text-lg text-slate-400 leading-relaxed">Advanced logistics, predictive routing, and comprehensive inventory intelligence.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* How It Works (Vertical Flow) */}
       <section className="py-32 bg-[#F8FAFC]">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 flex flex-col md:flex-row gap-16 lg:gap-32">
           <div className="md:w-1/3">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-corp-navy leading-tight sticky top-32">
+            <h2 className="text-4xl md:text-5xl font-extrabold text-corp-navy leading-tight sticky top-32"><img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />
               Start building smarter with Lutix.
             </h2>
           </div>

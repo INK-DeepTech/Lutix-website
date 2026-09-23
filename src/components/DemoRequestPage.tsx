@@ -108,7 +108,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
       {/* Booking Portal */}
       <section className="w-full py-12 md:py-16 px-6 md:px-8 max-w-3xl mx-auto -mt-12 relative z-20">
         <div className="bg-corp-light p-8 sm:p-12 rounded-3xl border border-[#dae2fd] shadow-xl">
-          <form onSubmit={handleSubmit} noValidate className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-8">
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
@@ -116,7 +116,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
                   Full Name
                 </label>
                 <div className="relative">
-                  <input
+                  <input required
                     id="fullName"
                     type="text"
                     placeholder="Jane Doe"
@@ -140,7 +140,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
                   Work Email
                 </label>
                 <div className="relative">
-                  <input
+                  <input required
                     id="workEmail"
                     type="email"
                     placeholder="jane@university.edu"
@@ -164,7 +164,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
                   Organization / University Name
                 </label>
                 <div className="relative">
-                  <input
+                  <input required
                     id="organization"
                     type="text"
                     placeholder="Stanford University"
@@ -187,7 +187,7 @@ export const DemoRequestPage: React.FC<DemoRequestPageProps> = ({ onRouteChange 
                 <label htmlFor="message" className="text-xs font-bold uppercase tracking-wider text-slate-600 block mb-2">
                   How can we help? (Optional)
                 </label>
-                <textarea
+                <textarea required
                   id="message"
                   rows={4}
                   placeholder="Tell us a little bit about what you're looking to solve..."

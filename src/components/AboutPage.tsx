@@ -6,7 +6,7 @@ const AboutPage = () => {
       <div className="max-w-[1200px] mx-auto text-center">
         <h1 className="text-5xl font-extrabold text-[#07326A] mb-16 font-serif">About Lutix DeepTech</h1>
         
-        <h2 className="text-3xl font-bold text-[#0A61C9] mb-8">Our Mission</h2>
+        <h2 className="text-3xl font-bold text-[#0A61C9] mb-8"><img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />Our Mission</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20 text-left">
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="font-bold text-[#07326A] text-xl mb-3">Develop Intelligent Technologies</h3>
@@ -26,7 +26,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-[#0A61C9] mb-8">Core Values</h2>
+        <h2 className="text-3xl font-bold text-[#0A61C9] mb-8"><img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />Core Values</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-20 text-left">
           <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
             <h3 className="font-bold text-[#07326A] mb-3 text-lg">Innovation</h3>
@@ -46,7 +46,7 @@ const AboutPage = () => {
           </div>
         </div>
 
-        <h2 className="text-3xl font-bold text-[#0A61C9] mb-12">The minds driving our innovation</h2>
+        <h2 className="text-3xl font-bold text-[#0A61C9] mb-12"><img src="/bird-icon.png" alt="Lutix Bird" className="w-8 h-8 md:w-10 md:h-10 inline-block mr-3 object-contain mix-blend-multiply" />The minds driving our innovation</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
            <div className="bg-white p-8 rounded-3xl shadow-sm">
               <img src="/ceo.jpg" alt="Iswarya" className="w-40 h-40 rounded-full mx-auto object-cover mb-6 shadow-md" />
@@ -54,12 +54,12 @@ const AboutPage = () => {
               <p className="text-[#0A61C9] font-medium">CEO & Co-Founder</p>
            </div>
            <div className="bg-white p-8 rounded-3xl shadow-sm">
-              <img src="/cto.jpg" alt="Nithishkumar" className="w-40 h-40 rounded-full mx-auto object-cover mb-6 shadow-md" />
+              <img src="/coo.jpg" alt="Nithishkumar" className="w-40 h-40 rounded-full mx-auto object-cover mb-6 shadow-md" />
               <h3 className="font-bold text-xl text-[#07326A]">Nithishkumar</h3>
               <p className="text-[#0A61C9] font-medium">CTO & Co-Founder</p>
            </div>
            <div className="bg-white p-8 rounded-3xl shadow-sm">
-              <img src="/coo.jpg" alt="Karthik Balaji" className="w-40 h-40 rounded-full mx-auto object-cover mb-6 shadow-md" />
+              <img src="/cto.jpg" alt="Karthik Balaji" className="w-40 h-40 rounded-full mx-auto object-cover mb-6 shadow-md" />
               <h3 className="font-bold text-xl text-[#07326A]">Karthik Balaji</h3>
               <p className="text-[#0A61C9] font-medium">COO</p>
            </div>
