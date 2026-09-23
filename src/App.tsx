@@ -6,7 +6,7 @@ import { HomePage } from './components/HomePage';
 import { AcademicOSPage } from './components/AcademicOSPage';
 import { PricingCalculatorPage } from './components/PricingCalculatorPage';
 import { DemoRequestPage } from './components/DemoRequestPage';
-import { AboutPage } from './components/AboutPage';
+import AboutPage from './components/AboutPage';
 
 export default function App() {
   const [currentRoute, setCurrentRoute] = useState<PageRoute>(() => {
