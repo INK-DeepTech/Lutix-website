@@ -9,17 +9,17 @@ interface HomePageProps {
 
 export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
   return (
-    <div className="w-full bg-white dark:bg-slate-900 transition-colors duration-300">
+    <div className="w-full bg-brand-mint dark:bg-slate-900 transition-colors duration-300">
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-20 pb-32 px-4 sm:px-6 lg:px-8 border-b border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-900/50">
+      <section className="relative overflow-hidden pt-20 pb-32 px-4 sm:px-6 lg:px-8 border-b border-slate-100 dark:border-slate-800 bg-brand-mint dark:bg-slate-900/50">
         <div className="max-w-7xl mx-auto flex flex-col items-center text-center gap-8 relative z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] rounded-full text-sm font-semibold">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-teal/10 text-brand-teal dark:text-[#8b80f9] rounded-full text-sm font-semibold">
             <span className="material-symbols-outlined text-[18px]">bolt</span>
             <span>Smart Automation for Your Whole Organization</span>
           </div>
 
-          <h1 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white tracking-tight leading-tight max-w-4xl">
+          <h1 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy dark:text-white tracking-tight leading-tight max-w-4xl">
             Run Your Organization Smarter — With Less Manual Work
           </h1>
 
@@ -30,7 +30,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <button 
               onClick={() => onRouteChange('demo')}
-              className="px-8 py-3.5 bg-[#3525cd] text-white rounded-xl text-sm font-semibold hover:bg-[#2b1da8] transition-all shadow-md flex items-center gap-2"
+              className="px-8 py-3.5 bg-brand-teal text-white rounded-xl text-sm font-semibold hover:bg-brand-cyan transition-all shadow-md flex items-center gap-2"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4" />
@@ -42,67 +42,67 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       {/* Services We Offer */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div className="text-center space-y-4 mb-16">
-          <h2 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white">
+          <h2 className="font-serif-brand text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy dark:text-white">
             Services We Offer
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Monitor className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Custom Web Pages & Software</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Custom Web Pages & Software</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Bespoke digital solutions tailored to your brand's specific needs, ensuring a unique and powerful online presence.
             </p>
           </button>
           
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Smartphone className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Mobile & Web Apps</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Mobile & Web Apps</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Cross-platform applications designed for performance, scalability, and seamless user experiences on any device.
             </p>
           </button>
 
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Code className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Website Development</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Website Development</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Modern, responsive, and robust websites engineered with the latest frontend and backend technologies.
             </p>
           </button>
 
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Truck className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Supply Chain Solutions</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Supply Chain Solutions</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Intelligent logistics and inventory tracking software to optimize your entire operational pipeline.
             </p>
           </button>
 
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Zap className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Intelligent Systems</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Intelligent Systems</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               AI-driven analytics and automation tools designed to simplify complex decision making.
             </p>
           </button>
 
-          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-white dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-[#3525cd] transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-100 to-indigo-100 dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-[#3525cd] dark:text-[#8b80f9]">
+          <button onClick={() => onRouteChange('demo')} className="text-left p-8 bg-brand-mint/80 backdrop-blur-sm dark:bg-slate-800 rounded-3xl shadow-sm border border-slate-100 dark:border-slate-700 hover:-translate-y-1 hover:shadow-xl hover:ring-2 hover:ring-brand-cyan transition-all duration-300 group">
+            <div className="w-14 h-14 rounded-2xl bg-brand-mint dark:from-blue-900 dark:to-indigo-900 flex items-center justify-center mb-6 text-brand-teal dark:text-[#8b80f9]">
               <Activity className="w-7 h-7" />
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Portfolio Showcase</h3>
+            <h3 className="text-2xl font-bold text-brand-navy dark:text-white mb-3">Portfolio Showcase</h3>
             <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
               Elegant and interactive digital portfolios to beautifully present your creative and professional work.
             </p>
@@ -111,50 +111,50 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       </section>
 
       {/* Why Us Section */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 via-white to-indigo-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border-y border-slate-100 dark:border-slate-800">
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-brand-ice dark:from-slate-900 dark:via-slate-800 dark:to-slate-900 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-4xl mx-auto text-center space-y-10">
-          <h2 className="font-serif-brand text-5xl md:text-7xl font-bold text-slate-900 dark:text-white tracking-tighter">
+          <h2 className="font-serif-brand text-5xl md:text-7xl font-bold text-brand-navy dark:text-white tracking-tighter">
             Why Us?
           </h2>
           <p className="text-xl md:text-2xl text-slate-700 dark:text-slate-300 leading-relaxed font-light">
-            We know exactly what problems you face on the ground. Our mission is to make advanced AI and enterprise-grade software <span className="text-blue-700 dark:text-blue-400 font-semibold">accessible to absolutely everyone</span>. Whether you are scaling a modern tech startup or running a <span className="text-blue-700 dark:text-blue-400 font-semibold">traditional local business</span>—like a wholesale dhal trader—we bridge the gap. We turn complex technology into simple, powerful tools that actually work for you.
+            We know exactly what problems you face on the ground. Our mission is to make advanced AI and enterprise-grade software <span className="text-brand-teal dark:text-blue-400 font-semibold">accessible to absolutely everyone</span>. Whether you are scaling a modern tech startup or running a <span className="text-brand-teal dark:text-blue-400 font-semibold">traditional local business</span>—like a wholesale dhal trader—we bridge the gap. We turn complex technology into simple, powerful tools that actually work for you.
           </p>
         </div>
       </section>
 
       {/* Core Capabilities */}
-      <section className="bg-slate-50 dark:bg-slate-900/50 py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-100 dark:border-slate-800">
+      <section className="bg-brand-mint dark:bg-slate-900/50 py-24 px-4 sm:px-6 lg:px-8 border-y border-slate-100 dark:border-slate-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white">
               A Platform Built for Scale
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 bg-brand-mint dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-brand-cyan/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-brand-teal/10 text-brand-teal dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Intelligent Workflows</h3>
+              <h3 className="text-xl font-bold text-brand-navy dark:text-white mb-3">Intelligent Workflows</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 Smart workflows that detect and fix common errors automatically.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 bg-brand-mint dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-brand-cyan/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-brand-teal/10 text-brand-teal dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Shield className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Enterprise Security</h3>
+              <h3 className="text-xl font-bold text-brand-navy dark:text-white mb-3">Enterprise Security</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 Your data is encrypted everywhere. Access is controlled by role.
               </p>
             </div>
-            <div className="p-8 bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-[#3525cd]/30 transition-all">
-              <div className="w-14 h-14 rounded-xl bg-[#3525cd]/10 text-[#3525cd] dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <div className="p-8 bg-brand-mint dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-700 group hover:border-brand-cyan/30 transition-all">
+              <div className="w-14 h-14 rounded-xl bg-brand-teal/10 text-brand-teal dark:text-[#8b80f9] flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Activity className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3">Real-Time Telemetry</h3>
+              <h3 className="text-xl font-bold text-brand-navy dark:text-white mb-3">Real-Time Telemetry</h3>
               <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                 See every automated transaction as it happens and dive deep into data.
               </p>
@@ -166,10 +166,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
       {/* Leadership */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-b border-slate-100 dark:border-slate-800">
         <div className="text-center space-y-4 mb-16">
-          <span className="text-sm font-bold text-[#3525cd] dark:text-[#8b80f9] uppercase tracking-widest">
+          <span className="text-sm font-bold text-brand-rust dark:text-brand-rust uppercase tracking-widest">
             Executive Leadership
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-navy dark:text-white">
             Driven by vision, anchored in execution
           </h2>
         </div>
@@ -182,10 +182,10 @@ export const HomePage: React.FC<HomePageProps> = ({ onRouteChange }) => {
                 alt={leader.name}
                 className="w-48 h-48 rounded-full object-cover shadow-md mb-6 hover:scale-105 transition-transform duration-500"
               />
-              <h3 className="font-serif-brand text-2xl font-bold text-slate-900 dark:text-white mb-2">
+              <h3 className="font-serif-brand text-2xl font-bold text-brand-navy dark:text-white mb-2">
                 {leader.name}
               </h3>
-              <p className="text-[#3525cd] dark:text-[#8b80f9] font-semibold text-sm">
+              <p className="text-brand-teal dark:text-[#8b80f9] font-semibold text-sm">
                 {leader.role}
               </p>
             </div>

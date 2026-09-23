@@ -44,7 +44,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col bg-white dark:bg-slate-900 text-slate-900 dark:text-white antialiased transition-colors duration-300">
+    <div className="min-h-screen flex flex-col bg-brand-mint dark:bg-slate-900 text-brand-navy dark:text-white antialiased transition-colors duration-300">
       <Header currentRoute={currentRoute} onRouteChange={handleRouteChange} theme={theme} setTheme={setTheme} />
 
       <main className="flex-1" id="main-content">

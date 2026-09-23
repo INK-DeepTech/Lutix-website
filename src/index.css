@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+  --color-brand-mint: #dbe8d8;
+  --color-brand-teal: #01949a;
+  --color-brand-navy: #003135;
+  --color-brand-cyan: #0fa4af;
+  --color-brand-ice: #afdde5;
+  --color-brand-rust: #964734;
+
   --color-surface: #faf8ff;
   --color-surface-bright: #faf8ff;
   --color-surface-dim: #d2d9f4;
@@ -51,8 +58,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #faf8ff;
-  color: #131b2e;
+  background-color: var(--color-brand-mint);
+  color: var(--color-brand-navy);
 }
 
 h1, h2, h3 {
