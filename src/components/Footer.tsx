@@ -37,10 +37,10 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
   };
 
   return (
-    <footer className="bg-[#0f172a] text-white flex flex-col w-full">
+    <footer className="bg-brand-slate text-white flex flex-col w-full">
 
       {/* Massive CTA for all pages */}
-      <div className="bg-[#064089] w-full">
+      <div className="bg-brand-slate w-full">
         <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col items-center text-center">
           <h2 className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-12 max-w-4xl">
             Ready to build a smarter future?
@@ -60,7 +60,7 @@ export const Footer: React.FC<FooterProps> = ({ onRouteChange }) => {
           
           {/* Newsletter Column */}
           <div className="lg:col-span-5 pr-0 lg:pr-12">
-            <img alt="Lutix" className="h-12 w-auto object-contain mb-8 invert brightness-0" src="/logo-horizontal.png" />
+            <img alt="Lutix" className="h-12 w-auto object-contain mb-8 invert mix-blend-screen" src="/logo-horizontal.png" />
             <p className="text-xl font-bold text-white mb-4">Join our newsletter</p>
             <p className="text-slate-400 mb-6">Stay up to date with the latest news, announcements, and articles.</p>
             <form onSubmit={handleSubscribe} className="flex gap-2 relative">
